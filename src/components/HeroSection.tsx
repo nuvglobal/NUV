@@ -16,7 +16,7 @@ export default function HeroSection() {
   const parallaxFast = useTransform(scrollY, [0, 600], [0, -120]);
 
   return (
-    <section id="hero" className="min-h-[28vh] md:min-h-[32vh] bg-[#0B0B10] relative overflow-hidden">
+    <section id="hero" className="min-h-[22vh] md:min-h-[26vh] bg-[#0B0B10] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Convert static blobs to parallax motion elements */}
@@ -30,7 +30,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-2 md:pt-12 md:pb-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-1 md:pt-8 md:pb-2">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Content */}
           <motion.div

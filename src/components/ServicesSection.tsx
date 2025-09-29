@@ -52,8 +52,8 @@ export default function ServicesSection() {
               className="group"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-14 h-14 bg-[#FF3D81]/20 rounded-xl mb-4 group-hover:bg-[#FF3D81]/30 transition-colors">
-                  <service.icon className="h-7 w-7 text-[#FF3D81]" />
+                <div className="flex items-center justify-center w-14 h-14 bg-[#FF3131]/20 rounded-xl mb-4 group-hover:bg-[#FF3131]/30 transition-colors">
+                  <service.icon className="h-7 w-7 text-[#FF3131]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 tracking-tight">
                   {service.title}

@@ -27,7 +27,7 @@ export default function Header() {
     >
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#FF3D81] origin-left pointer-events-none"
+        className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#FF3131] origin-left pointer-events-none"
         style={{ scaleX: progress }}
       />
 

@@ -88,7 +88,7 @@ export default function HeroSection() {
             >
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 group"
+                className="bg-[#FF3131] hover:bg-[#FF3131]/90 text-white font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 group"
               >
                 Build My Website
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

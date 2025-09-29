@@ -156,7 +156,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                className="w-full bg-[#FF3131] hover:bg-[#FF3131]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
@@ -178,15 +178,15 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
-                  <MessageSquare className="h-6 w-6 text-[#FF3D81]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3131]/20 rounded-xl">
+                  <MessageSquare className="h-6 w-6 text-[#FF3131]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">WhatsApp</h4>
                     <p className="text-gray-400">Direct chat for quick questions</p>
                     <Button
                       variant="link"
-                      className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
+                      className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
                       onClick={() => window.open("https://wa.me/918904009869", "_blank")}
                     >
                       Start Chat →
@@ -196,14 +196,14 @@ export default function ContactSection() {
 
                 <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
-                  <Mail className="h-6 w-6 text-[#FF3D81]" />
+                  <Mail className="h-6 w-6 text-[#FF3131]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
                     <p className="text-gray-400">vex1l.vx@gmail.com</p>
                     <Button
                       variant="link"
-                      className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
+                      className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
                       onClick={() => window.open("mailto:vex1l.vx@gmail.com", "_blank")}
                     >
                       Send Email →
@@ -213,7 +213,7 @@ export default function ContactSection() {
 
                 <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
-                  <Phone className="h-6 w-6 text-[#FF3D81]" />
+                  <Phone className="h-6 w-6 text-[#FF3131]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Quick Payment</h4>
@@ -247,23 +247,23 @@ export default function ContactSection() {
               </p>
               <div className="flex items-center gap-4">
                 <a href="#" aria-label="Instagram" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
-                    <Instagram className="h-6 w-6 text-[#FF3D81]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
+                    <Instagram className="h-6 w-6 text-[#FF3131]" />
                   </div>
                 </a>
                 <a href="#" aria-label="Twitter" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
-                    <Twitter className="h-6 w-6 text-[#FF3D81]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
+                    <Twitter className="h-6 w-6 text-[#FF3131]" />
                   </div>
                 </a>
                 <a href="#" aria-label="Facebook" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
-                    <Facebook className="h-6 w-6 text-[#FF3D81]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
+                    <Facebook className="h-6 w-6 text-[#FF3131]" />
                   </div>
                 </a>
                 <a href="#" aria-label="YouTube" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
-                    <Youtube className="h-6 w-6 text-[#FF3D81]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
+                    <Youtube className="h-6 w-6 text-[#FF3131]" />
                   </div>
                 </a>
               </div>

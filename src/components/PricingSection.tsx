@@ -89,7 +89,7 @@ export default function PricingSection() {
               
                   <div className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 h-full transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-[#FF3D81] bg-[#FF3D81]/5' 
+                  ? 'border-[#FF3131] bg-[#FF3131]/5' 
                   : 'border-white/10 hover:bg-white/10'
               }`}>
                 <div className="text-center mb-8">
@@ -104,7 +104,7 @@ export default function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-[#FF3D81] mr-3 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-[#FF3131] mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -114,7 +114,7 @@ export default function PricingSection() {
                   onClick={() => scrollToSection("contact")}
                   className={`w-full font-semibold py-3 rounded-lg transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white'
+                      ? 'bg-[#FF3131] hover:bg-[#FF3131]/90 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                   }`}
                 >

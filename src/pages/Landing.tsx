@@ -27,7 +27,7 @@ export default function Landing() {
           style={{ y: ySlow, rotate }}
           className="absolute -top-24 -left-24 w-[60vw] h-[60vw] rounded-full blur-3xl"
         >
-          <div className="w-full h-full bg-[conic-gradient(from_180deg_at_50%_50%,_#FF3D81_0%,_transparent_35%,_#C4B5FD_65%,_transparent_100%)] opacity-20" />
+          <div className="w-full h-full bg-[conic-gradient(from_180deg_at_50%_50%,_#FF3131_0%,_transparent_35%,_#C4B5FD_65%,_transparent_100%)] opacity-20" />
         </motion.div>
         <motion.div
           style={{ y: yFast }}
@@ -47,7 +47,7 @@ export default function Landing() {
           style={{ y: yFast }}
           className="absolute inset-0"
         >
-          <div className="absolute left-10 top-24 w-1.5 h-1.5 rounded-full bg-[#FF3D81] opacity-70" />
+          <div className="absolute left-10 top-24 w-1.5 h-1.5 rounded-full bg-[#FF3131] opacity-70" />
           <div className="absolute left-1/3 top-1/3 w-1 h-1 rounded-full bg-[#C4B5FD] opacity-60" />
           <div className="absolute right-24 top-1/2 w-1.5 h-1.5 rounded-full bg-[#FF3D81] opacity-60" />
           <div className="absolute right-1/4 bottom-24 w-1 h-1 rounded-full bg-white opacity-40" />

@@ -75,7 +75,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-[#FF3D81] transition-colors">
+                <a href="#" className="text-gray-400 hover:text-[#FF3131] transition-colors">
                   Terms of Service
                 </a>
               </li>

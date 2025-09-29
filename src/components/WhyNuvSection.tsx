@@ -21,7 +21,7 @@ export default function WhyNuvSection() {
   ];
 
   return (
-    <section id="why-nuv" className="pt-8 md:pt-12 pb-20 bg-[#0B0B10] relative">
+    <section id="why-nuv" className="pt-6 md:pt-6 pb-20 bg-[#0B0B10] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

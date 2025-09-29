@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
@@ -10,12 +10,25 @@ export default function HeroSection() {
     }
   };
 
+  // Parallax effects tied to scroll
+  const { scrollY } = useScroll();
+  const parallaxSlow = useTransform(scrollY, [0, 600], [0, -60]);
+  const parallaxFast = useTransform(scrollY, [0, 600], [0, -120]);
+  const parallaxRings = useTransform(scrollY, [0, 600], [0, -40]);
+
   return (
     <section id="hero" className="min-h-screen bg-[#1C1C1E] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00B2A9]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#F7E7CE]/5 rounded-full blur-3xl"></div>
+        {/* Convert static blobs to parallax motion elements */}
+        <motion.div
+          style={{ y: parallaxSlow }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00B2A9]/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          style={{ y: parallaxFast }}
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#F7E7CE]/5 rounded-full blur-3xl"
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -100,21 +113,31 @@ export default function HeroSection() {
             <div className="relative w-full h-96 lg:h-[500px]">
               {/* Abstract Futuristic Graphic */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#00B2A9]/20 to-transparent rounded-3xl"></div>
-              <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#00B2A9] rounded-full blur-xl opacity-30 animate-pulse"></div>
-              <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#F7E7CE] rounded-full blur-lg opacity-40 animate-pulse delay-1000"></div>
-              
-              {/* Geometric Shapes */}
+
+              {/* Parallax blobs in the visual too */}
               <motion.div
+                style={{ y: parallaxSlow }}
+                className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#00B2A9] rounded-full blur-xl opacity-30 animate-pulse"
+              />
+              <motion.div
+                style={{ y: parallaxFast }}
+                className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#F7E7CE] rounded-full blur-lg opacity-40 animate-pulse delay-1000"
+              />
+
+              {/* Geometric Rings with slight parallax */}
+              <motion.div
+                style={{ y: parallaxRings }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-[#00B2A9]/30 rounded-full"
-              ></motion.div>
+              />
               <motion.div
+                style={{ y: parallaxRings }}
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-[#F7E7CE]/20 rounded-full"
-              ></motion.div>
-              
+              />
+
               {/* Central Element */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-[#00B2A9] to-[#F7E7CE] rounded-lg shadow-2xl"></div>
             </div>

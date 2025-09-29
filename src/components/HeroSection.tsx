@@ -17,7 +17,7 @@ export default function HeroSection() {
   const parallaxRings = useTransform(scrollY, [0, 600], [0, -40]);
 
   return (
-    <section id="hero" className="min-h-[65vh] md:min-h-screen bg-[#0B0B10] relative overflow-hidden">
+    <section id="hero" className="min-h-[55vh] md:min-h-[70vh] bg-[#0B0B10] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Convert static blobs to parallax motion elements */}
@@ -31,7 +31,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 md:pt-32 md:pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 md:pt-24 md:pb-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
           <motion.div

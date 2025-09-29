@@ -42,8 +42,8 @@ export default function AboutSection() {
                 <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl mb-3 mx-auto">
                   <Target className="h-6 w-6 text-[#00B2A9]" />
                 </div>
-                <div className="text-2xl font-bold text-white">98%</div>
-                <div className="text-sm text-gray-400">Success Rate</div>
+                <div className="text-2xl font-bold text-white">4.9/5</div>
+                <div className="text-sm text-gray-400">Client Satisfaction</div>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl mb-3 mx-auto">

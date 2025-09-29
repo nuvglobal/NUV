@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare, Phone, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
@@ -237,6 +237,36 @@ export default function ContactSection() {
                 We typically respond within 2-4 hours during business hours (9 AM - 6 PM IST).
                 For urgent projects, WhatsApp is your fastest option.
               </p>
+            </div>
+
+            {/* Social Profiles */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Social Profiles</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Follow us for updates and case studies.
+              </p>
+              <div className="flex items-center gap-4">
+                <a href="#" aria-label="Instagram" className="group">
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
+                    <Instagram className="h-6 w-6 text-[#FF3D81]" />
+                  </div>
+                </a>
+                <a href="#" aria-label="Twitter" className="group">
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
+                    <Twitter className="h-6 w-6 text-[#FF3D81]" />
+                  </div>
+                </a>
+                <a href="#" aria-label="Facebook" className="group">
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
+                    <Facebook className="h-6 w-6 text-[#FF3D81]" />
+                  </div>
+                </a>
+                <a href="#" aria-label="YouTube" className="group">
+                  <div className="w-12 h-12 rounded-xl bg-[#FF3D81]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3D81]/30 transition-colors">
+                    <Youtube className="h-6 w-6 text-[#FF3D81]" />
+                  </div>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

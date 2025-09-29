@@ -187,7 +187,7 @@ export default function ContactSection() {
                     <Button
                       variant="link"
                       className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
-                      onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                      onClick={() => window.open("https://wa.me/918904009869", "_blank")}
                     >
                       Start Chat →
                     </Button>
@@ -200,11 +200,11 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-gray-400">hello@nuv.agency</p>
+                    <p className="text-gray-400">vex1l.vx@gmail.com</p>
                     <Button
                       variant="link"
                       className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
-                      onClick={() => window.open("mailto:hello@nuv.agency", "_blank")}
+                      onClick={() => window.open("mailto:vex1l.vx@gmail.com", "_blank")}
                     >
                       Send Email →
                     </Button>

@@ -20,7 +20,7 @@ export default function Footer() {
               onClick={() => scrollToSection("hero")}
             >
               <img
-                src="https://harmless-tapir-303.convex.cloud/api/storage/553be18f-ffd8-4094-a425-d40ef9e5f4be"
+                src="https://harmless-tapir-303.convex.cloud/api/storage/fde5fd9c-bcbc-431d-86cf-6887522b39c4"
                 alt="NUV logo"
                 className="h-9 w-auto rounded-md"
               />

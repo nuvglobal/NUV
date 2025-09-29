@@ -55,30 +55,7 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative w-full h-96">
-              {/* Abstract team visualization */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FF3D81]/10 to-[#C4B5FD]/10 rounded-3xl"></div>
-              
-              {/* Geometric representation of team */}
-              <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-[#FF3D81] rounded-full opacity-80"></div>
-              <div className="absolute top-1/3 right-1/3 w-12 h-12 bg-[#C4B5FD] rounded-full opacity-70"></div>
-              <div className="absolute bottom-1/3 left-1/3 w-14 h-14 bg-white rounded-full opacity-60"></div>
-              
-              {/* Connecting lines */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-                <line x1="100" y1="100" x2="300" y2="130" stroke="#FF3D81" strokeWidth="2" opacity="0.3" />
-                <line x1="300" y1="130" x2="150" y2="270" stroke="#C4B5FD" strokeWidth="2" opacity="0.3" />
-                <line x1="150" y1="270" x2="100" y2="100" stroke="white" strokeWidth="2" opacity="0.3" />
-              </svg>
-            </div>
-          </motion.div>
+          
         </div>
       </div>
     </section>

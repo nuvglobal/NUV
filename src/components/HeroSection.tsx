@@ -103,45 +103,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
-          >
-            <div className="relative w-full h-96 lg:h-[500px]">
-              {/* Abstract Futuristic Graphic */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FF3D81]/20 to-transparent rounded-3xl"></div>
-
-              {/* Parallax blobs in the visual too */}
-              <motion.div
-                style={{ y: parallaxSlow }}
-                className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#FF3D81] rounded-full blur-xl opacity-30 animate-pulse"
-              />
-              <motion.div
-                style={{ y: parallaxFast }}
-                className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#C4B5FD] rounded-full blur-lg opacity-40 animate-pulse delay-1000"
-              />
-
-              {/* Geometric Rings with slight parallax */}
-              <motion.div
-                style={{ y: parallaxRings }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-[#FF3D81]/30 rounded-full"
-              />
-              <motion.div
-                style={{ y: parallaxRings }}
-                animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-[#C4B5FD]/20 rounded-full"
-              />
-
-              {/* Central Element */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-[#00B2A9] to-[#F7E7CE] rounded-lg shadow-2xl"></div>
-            </div>
-          </motion.div>
+          
         </div>
       </div>
     </section>

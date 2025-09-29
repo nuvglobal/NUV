@@ -39,9 +39,11 @@ export default function Header() {
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
-            <span className="text-2xl font-bold text-white tracking-tight">
-              N<span className="text-[#00B2A9]">U</span>V
-            </span>
+            <img
+              src="https://harmless-tapir-303.convex.cloud/api/storage/553be18f-ffd8-4094-a425-d40ef9e5f4be"
+              alt="NUV logo"
+              className="h-8 w-auto rounded-md"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}

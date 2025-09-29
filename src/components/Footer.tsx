@@ -19,9 +19,11 @@ export default function Footer() {
               className="flex items-center cursor-pointer mb-4"
               onClick={() => scrollToSection("hero")}
             >
-              <span className="text-3xl font-bold text-white tracking-tight">
-                N<span className="text-[#00B2A9]">U</span>V
-              </span>
+              <img
+                src="https://harmless-tapir-303.convex.cloud/api/storage/553be18f-ffd8-4094-a425-d40ef9e5f4be"
+                alt="NUV logo"
+                className="h-9 w-auto rounded-md"
+              />
             </motion.div>
             <p className="text-gray-400 max-w-md leading-relaxed">
               Nexus of Unique Vision. We craft digital identities engineered for growth, 

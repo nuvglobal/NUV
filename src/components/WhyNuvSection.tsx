@@ -21,7 +21,7 @@ export default function WhyNuvSection() {
   ];
 
   return (
-    <section id="why-nuv" className="py-20 bg-[#1C1C1E] relative">
+    <section id="why-nuv" className="py-20 bg-[#0B0B10] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -32,14 +32,14 @@ export default function WhyNuvSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             The{" "}
-            <span className="text-[#F7E7CE] font-serif italic">Nexus</span>{" "}
+            <span className="text-[#C4B5FD] font-serif italic">Nexus</span>{" "}
             of Unique Vision.
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We're not another template factory. We're an agency that blends design,
             strategy, and tech to create websites that dominate attention. With NUV,
             you get more than a website—you get a{" "}
-            <span className="text-[#00B2A9] font-semibold">growth weapon</span>.
+            <span className="text-[#FF3D81] font-semibold">growth weapon</span>.
           </p>
         </motion.div>
 
@@ -54,8 +54,8 @@ export default function WhyNuvSection() {
               className="group"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-16 h-16 bg-[#00B2A9]/20 rounded-xl mb-6 group-hover:bg-[#00B2A9]/30 transition-colors">
-                  <value.icon className="h-8 w-8 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-16 h-16 bg-[#FF3D81]/20 rounded-xl mb-6 group-hover:bg-[#FF3D81]/30 transition-colors">
+                  <value.icon className="h-8 w-8 text-[#FF3D81]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                   {value.title}

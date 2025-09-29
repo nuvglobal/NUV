@@ -54,7 +54,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#1C1C1E]">
+    <section id="contact" className="py-20 bg-[#0B0B10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -65,7 +65,7 @@ export default function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Let's Build Something{" "}
-            <span className="text-[#F7E7CE] font-serif italic">Amazing</span>
+            <span className="text-[#C4B5FD] font-serif italic">Amazing</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to transform your digital presence? Get in touch and let's discuss your project.
@@ -156,7 +156,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#00B2A9] hover:bg-[#00B2A9]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                className="w-full bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
@@ -178,15 +178,15 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl">
-                    <MessageSquare className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
+                  <MessageSquare className="h-6 w-6 text-[#FF3D81]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">WhatsApp</h4>
                     <p className="text-gray-400">Direct chat for quick questions</p>
                     <Button
                       variant="link"
-                      className="text-[#00B2A9] p-0 h-auto hover:text-[#00B2A9]/80"
+                      className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
                       onClick={() => window.open("https://wa.me/919876543210", "_blank")}
                     >
                       Start Chat →
@@ -195,15 +195,15 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl">
-                    <Mail className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
+                  <Mail className="h-6 w-6 text-[#FF3D81]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
                     <p className="text-gray-400">hello@nuv.agency</p>
                     <Button
                       variant="link"
-                      className="text-[#00B2A9] p-0 h-auto hover:text-[#00B2A9]/80"
+                      className="text-[#FF3D81] p-0 h-auto hover:text-[#FF3D81]/80"
                       onClick={() => window.open("mailto:hello@nuv.agency", "_blank")}
                     >
                       Send Email →
@@ -212,8 +212,8 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl">
-                    <Phone className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
+                  <Phone className="h-6 w-6 text-[#FF3D81]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Quick Payment</h4>
@@ -229,8 +229,8 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#00B2A9]/10 to-[#F7E7CE]/10 border border-[#00B2A9]/20 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-[#F7E7CE] mb-2">
+              <div className="bg-gradient-to-br from-[#FF3D81]/10 to-[#C4B5FD]/10 border border-[#FF3D81]/20 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-[#C4B5FD] mb-2">
                 Response Time
               </h4>
               <p className="text-gray-300 text-sm">

@@ -17,7 +17,7 @@ export default function HeroSection() {
   const parallaxRings = useTransform(scrollY, [0, 600], [0, -40]);
 
   return (
-    <section id="hero" className="min-h-screen bg-[#1C1C1E] relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-[#0B0B10] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Convert static blobs to parallax motion elements */}
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
               >
                 Websites that{" "}
-                <span className="text-[#F7E7CE] font-serif italic">work</span>{" "}
+                <span className="text-[#C4B5FD] font-serif italic">work</span>{" "}
                 as hard as you do.
               </motion.h1>
 
@@ -72,9 +72,9 @@ export default function HeroSection() {
               >
                 At NUV, we don't just build websites. We craft digital identities
                 engineered for{" "}
-                <span className="text-[#F7E7CE] font-semibold">growth</span>,{" "}
-                <span className="text-[#F7E7CE] font-semibold">authority</span>, and{" "}
-                <span className="text-[#F7E7CE] font-semibold">trust</span>. Whether
+                <span className="text-[#C4B5FD] font-semibold">growth</span>,{" "}
+                <span className="text-[#C4B5FD] font-semibold">authority</span>, and{" "}
+                <span className="text-[#C4B5FD] font-semibold">trust</span>. Whether
                 you're a startup or a scaling brand, your site becomes your strongest
                 business asset.
               </motion.p>
@@ -88,7 +88,7 @@ export default function HeroSection() {
             >
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-[#00B2A9] hover:bg-[#00B2A9]/90 text-white font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 group"
+                className="bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 group"
               >
                 Build My Website
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -96,7 +96,7 @@ export default function HeroSection() {
               <Button
                 onClick={() => scrollToSection("pricing")}
                 variant="outline"
-                className="border-[#F7E7CE] text-[#F7E7CE] hover:bg-[#F7E7CE] hover:text-[#1C1C1E] font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300"
+                className="border-[#C4B5FD] text-[#C4B5FD] hover:bg-[#C4B5FD] hover:text-[#0B0B10] font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300"
               >
                 See Pricing
               </Button>
@@ -112,16 +112,16 @@ export default function HeroSection() {
           >
             <div className="relative w-full h-96 lg:h-[500px]">
               {/* Abstract Futuristic Graphic */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00B2A9]/20 to-transparent rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FF3D81]/20 to-transparent rounded-3xl"></div>
 
               {/* Parallax blobs in the visual too */}
               <motion.div
                 style={{ y: parallaxSlow }}
-                className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#00B2A9] rounded-full blur-xl opacity-30 animate-pulse"
+                className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#FF3D81] rounded-full blur-xl opacity-30 animate-pulse"
               />
               <motion.div
                 style={{ y: parallaxFast }}
-                className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#F7E7CE] rounded-full blur-lg opacity-40 animate-pulse delay-1000"
+                className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#C4B5FD] rounded-full blur-lg opacity-40 animate-pulse delay-1000"
               />
 
               {/* Geometric Rings with slight parallax */}
@@ -129,13 +129,13 @@ export default function HeroSection() {
                 style={{ y: parallaxRings }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-[#00B2A9]/30 rounded-full"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-[#FF3D81]/30 rounded-full"
               />
               <motion.div
                 style={{ y: parallaxRings }}
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-[#F7E7CE]/20 rounded-full"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-[#C4B5FD]/20 rounded-full"
               />
 
               {/* Central Element */}

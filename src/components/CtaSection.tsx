@@ -11,11 +11,11 @@ export default function CtaSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-[#00B2A9]/10 to-[#F7E7CE]/10 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-[#FF3D81]/10 to-[#C4B5FD]/10 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#1C1C1E]/80"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00B2A9]/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[#0B0B10]/80"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FF3D81]/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -28,14 +28,14 @@ export default function CtaSection() {
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
             Your website is your new{" "}
-            <span className="text-[#F7E7CE] font-serif italic">storefront</span>.
+            <span className="text-[#C4B5FD] font-serif italic">storefront</span>.
             <br />
             Make it unforgettable.
           </h2>
           
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Join businesses who trust NUV to engineer{" "}
-            <span className="text-[#00B2A9] font-semibold">growth</span>.
+            <span className="text-[#FF3D81] font-semibold">growth</span>.
           </p>
 
           <motion.div
@@ -46,7 +46,7 @@ export default function CtaSection() {
           >
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-[#00B2A9] hover:bg-[#00B2A9]/90 text-white font-bold px-12 py-6 text-xl rounded-xl transition-all duration-300 hover:scale-105 group"
+              className="bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white font-bold px-12 py-6 text-xl rounded-xl transition-all duration-300 hover:scale-105 group"
             >
               Get Started with NUV
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />

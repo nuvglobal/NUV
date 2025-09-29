@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1C1C1E] border-t border-white/10 py-12">
+    <footer className="bg-[#0B0B10] border-t border-white/10 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Description */}
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("hero")}
-                  className="text-gray-400 hover:text-[#00B2A9] transition-colors"
+                  className="text-gray-400 hover:text-[#FF3D81] transition-colors"
                 >
                   Home
                 </button>
@@ -73,7 +73,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-[#00B2A9] transition-colors">
+                <a href="#" className="text-gray-400 hover:text-[#FF3D81] transition-colors">
                   Terms of Service
                 </a>
               </li>

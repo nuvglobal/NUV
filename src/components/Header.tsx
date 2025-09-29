@@ -23,11 +23,11 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[#1C1C1E]/95 backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#0B0B10]/95 backdrop-blur-md border-b border-white/10"
     >
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#00B2A9] origin-left pointer-events-none"
+        className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#FF3D81] origin-left pointer-events-none"
         style={{ scaleX: progress }}
       />
 

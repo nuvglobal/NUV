@@ -26,7 +26,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-[#1C1C1E] to-[#2A2A2E]">
+    <section id="services" className="py-20 bg-gradient-to-b from-[#0B0B10] to-[#1A1A22]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,7 @@ export default function ServicesSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Our Services, Your{" "}
-            <span className="text-[#F7E7CE] font-serif italic">Growth</span>.
+            <span className="text-[#C4B5FD] font-serif italic">Growth</span>.
           </h2>
         </motion.div>
 
@@ -52,8 +52,8 @@ export default function ServicesSection() {
               className="group"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-14 h-14 bg-[#00B2A9]/20 rounded-xl mb-4 group-hover:bg-[#00B2A9]/30 transition-colors">
-                  <service.icon className="h-7 w-7 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-14 h-14 bg-[#FF3D81]/20 rounded-xl mb-4 group-hover:bg-[#FF3D81]/30 transition-colors">
+                  <service.icon className="h-7 w-7 text-[#FF3D81]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 tracking-tight">
                   {service.title}
@@ -73,8 +73,8 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-[#00B2A9]/10 to-[#F7E7CE]/10 border border-[#00B2A9]/20 rounded-xl p-6 max-w-2xl mx-auto">
-            <h4 className="text-lg font-semibold text-[#F7E7CE] mb-2">
+          <div className="bg-gradient-to-r from-[#FF3D81]/10 to-[#C4B5FD]/10 border border-[#FF3D81]/20 rounded-xl p-6 max-w-2xl mx-auto">
+            <h4 className="text-lg font-semibold text-[#C4B5FD] mb-2">
               Optional Upsell Add-on
             </h4>
             <p className="text-gray-300">

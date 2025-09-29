@@ -53,7 +53,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-[#1C1C1E]">
+    <section id="pricing" className="py-20 bg-[#0B0B10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -64,7 +64,7 @@ export default function PricingSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Plans for Every{" "}
-            <span className="text-[#F7E7CE] font-serif italic">Stage</span>.
+            <span className="text-[#C4B5FD] font-serif italic">Stage</span>.
           </h2>
         </motion.div>
 
@@ -87,16 +87,16 @@ export default function PricingSection() {
                 </div>
               )}
               
-              <div className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 h-full transition-all duration-300 hover:scale-105 ${
+                  <div className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 h-full transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-[#00B2A9] bg-[#00B2A9]/5' 
+                  ? 'border-[#FF3D81] bg-[#FF3D81]/5' 
                   : 'border-white/10 hover:bg-white/10'
               }`}>
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
                     {plan.name}
                   </h3>
-                  <div className="text-4xl font-bold text-[#F7E7CE] mb-4">
+                  <div className="text-4xl font-bold text-[#C4B5FD] mb-4">
                     {plan.price}
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-[#00B2A9] mr-3 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-[#FF3D81] mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -114,7 +114,7 @@ export default function PricingSection() {
                   onClick={() => scrollToSection("contact")}
                   className={`w-full font-semibold py-3 rounded-lg transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-[#00B2A9] hover:bg-[#00B2A9]/90 text-white'
+                      ? 'bg-[#FF3D81] hover:bg-[#FF3D81]/90 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                   }`}
                 >

@@ -24,12 +24,12 @@ export default function Landing() {
       <div className="pointer-events-none absolute inset-0">
         <motion.video
           style={{ y: ySlow }}
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-35"
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
         >
           <source src="https://videos.pexels.com/video-files/5582998/5582998-uhd_2560_1440_25fps.mp4" type="video/mp4" />
         </motion.video>

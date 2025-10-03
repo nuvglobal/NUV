@@ -30,7 +30,7 @@ export default function WhyNuvSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="mt-4 md:mt-6 text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             The{" "}
             <span className="text-[#C4B5FD] font-serif italic">Nexus</span>{" "}
             of Unique Vision.

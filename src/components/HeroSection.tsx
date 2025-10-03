@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { smoothScrollTo } from "@/lib/utils";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -9,7 +10,7 @@ export default function HeroSection() {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      smoothScrollTo(offsetPosition, 650);
     }
   };
 

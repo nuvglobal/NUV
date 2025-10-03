@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { smoothScrollTo } from "@/lib/utils";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -7,7 +8,7 @@ export default function Footer() {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      smoothScrollTo(offsetPosition, 650);
     }
   };
 

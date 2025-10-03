@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { smoothScrollTo } from "@/lib/utils";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,11 +14,10 @@ export default function Header() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Smooth scroll with header offset for consistent desktop behavior
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      smoothScrollTo(offsetPosition, 650);
       setIsMenuOpen(false);
     }
   };

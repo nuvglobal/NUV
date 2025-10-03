@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WhyNuvSection from "@/components/WhyNuvSection";
 import ServicesSection from "@/components/ServicesSection";
-import PricingSection from "@/components/PricingSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import ContactSection from "@/components/ContactSection";
@@ -59,7 +58,6 @@ export default function Landing() {
       <HeroSection />
       <WhyNuvSection />
       <ServicesSection />
-      <PricingSection />
       <AboutSection />
       <CtaSection />
       <ContactSection />

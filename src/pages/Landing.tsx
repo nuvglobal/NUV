@@ -30,8 +30,10 @@ export default function Landing() {
           loop
           playsInline
           preload="metadata"
+          poster="/logo_bg.png"
         >
           <source src="https://videos.pexels.com/video-files/5582998/5582998-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="https://cdn.coverr.co/videos/coverr-cyberpunk-traffic-8747/1080p.mp4" type="video/mp4" />
         </motion.video>
 
         <motion.div

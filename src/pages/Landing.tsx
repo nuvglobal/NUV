@@ -22,20 +22,6 @@ export default function Landing() {
       className="min-h-screen bg-[#0B0B10] relative overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0">
-        <motion.video
-          style={{ y: ySlow }}
-          className="absolute inset-0 w-full h-full object-cover opacity-35"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/logo_bg.png"
-        >
-          <source src="https://videos.pexels.com/video-files/5582998/5582998-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          <source src="https://cdn.coverr.co/videos/coverr-cyberpunk-traffic-8747/1080p.mp4" type="video/mp4" />
-        </motion.video>
-
         <motion.div
           style={{ y: ySlow, rotate }}
           className="absolute -top-24 -left-24 w-[60vw] h-[60vw] rounded-full blur-3xl"

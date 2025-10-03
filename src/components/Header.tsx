@@ -67,12 +67,6 @@ export default function Header() {
               Services
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
-              className="text-white hover:text-[#00B2A9] transition-colors font-medium"
-            >
-              Pricing Plans
-            </button>
-            <button
               onClick={() => scrollToSection("contact")}
               className="text-white hover:text-[#00B2A9] transition-colors font-medium"
             >
@@ -125,12 +119,6 @@ export default function Header() {
                 className="text-white hover:text-[#00B2A9] transition-colors font-medium text-left"
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection("pricing")}
-                className="text-white hover:text-[#00B2A9] transition-colors font-medium text-left"
-              >
-                Pricing Plans
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

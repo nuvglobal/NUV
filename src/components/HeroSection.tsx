@@ -93,11 +93,11 @@ export default function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
-                onClick={() => scrollToSection("pricing")}
+                onClick={() => scrollToSection("services")}
                 variant="outline"
                 className="border-[#C4B5FD] text-[#C4B5FD] hover:bg-[#C4B5FD] hover:text-[#0B0B10] font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300"
               >
-                See Pricing
+                Explore Services
               </Button>
             </motion.div>
           </motion.div>

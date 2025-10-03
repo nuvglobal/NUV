@@ -59,14 +59,6 @@ export default function Footer() {
                   Services
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("pricing")}
-                  className="text-gray-400 hover:text-[#00B2A9] transition-colors"
-                >
-                  Pricing
-                </button>
-              </li>
             </ul>
           </div>
         </div>

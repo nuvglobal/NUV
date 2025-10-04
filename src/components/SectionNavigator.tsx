@@ -6,6 +6,7 @@ import { smoothScrollTo } from "@/lib/utils";
 export default function SectionNavigator() {
   const [activeSection, setActiveSection] = useState("hero");
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const isScrollingRef = useRef(false);
 
   const sections = [
     { id: "hero", label: "Home", icon: Home },
@@ -18,11 +19,14 @@ export default function SectionNavigator() {
     // Use Intersection Observer for more accurate section detection
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px", // Trigger when section is in the middle-upper portion of viewport
-      threshold: [0, 0.25, 0.5, 0.75, 1],
+      rootMargin: "-80px 0px -40% 0px", // Account for header and better mobile detection
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      // Don't update during programmatic scrolling
+      if (isScrollingRef.current) return;
+
       // Find the most visible section
       let maxRatio = 0;
       let mostVisibleSection = "";
@@ -59,10 +63,22 @@ export default function SectionNavigator() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
+      // Set scrolling flag to prevent observer updates during scroll
+      isScrollingRef.current = true;
+      
+      // Immediately update active state for instant feedback
+      setActiveSection(sectionId);
+      
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
+      
       smoothScrollTo(offsetPosition, 650);
+      
+      // Clear scrolling flag after animation completes
+      setTimeout(() => {
+        isScrollingRef.current = false;
+      }, 700);
     }
   };
 

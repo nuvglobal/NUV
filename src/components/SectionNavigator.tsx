@@ -19,10 +19,10 @@ export default function SectionNavigator() {
     // Use Intersection Observer for more accurate section detection
     const observerOptions = {
       root: null,
-      // Adjusted rootMargin for better mobile detection - smaller top offset, larger bottom threshold
-      rootMargin: "-100px 0px -30% 0px",
+      // Better mobile detection - adjusted for bottom navigation bar
+      rootMargin: "-80px 0px -120px 0px",
       // More granular thresholds for smoother detection
-      threshold: [0, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -30,30 +30,31 @@ export default function SectionNavigator() {
       if (isScrollingRef.current) return;
 
       // Find the most visible section with better logic
-      let maxRatio = 0;
+      let maxVisibility = 0;
       let mostVisibleSection = "";
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Calculate visibility score based on intersection ratio and position
+          // Calculate visibility score based on intersection ratio and viewport position
           const rect = entry.boundingClientRect;
           const viewportHeight = window.innerHeight;
-          const elementCenter = rect.top + rect.height / 2;
-          const viewportCenter = viewportHeight / 2;
           
-          // Prefer sections closer to viewport center
-          const centerDistance = Math.abs(elementCenter - viewportCenter);
-          const centerScore = 1 - (centerDistance / viewportHeight);
-          const visibilityScore = entry.intersectionRatio * 0.7 + centerScore * 0.3;
+          // Calculate how much of the section is visible
+          const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+          const visibilityRatio = visibleHeight / viewportHeight;
+          
+          // Prefer sections that occupy more viewport space
+          const visibility = entry.intersectionRatio * 0.6 + visibilityRatio * 0.4;
 
-          if (visibilityScore > maxRatio) {
-            maxRatio = visibilityScore;
+          if (visibility > maxVisibility) {
+            maxVisibility = visibility;
             mostVisibleSection = entry.target.id;
           }
         }
       });
 
-      if (mostVisibleSection && maxRatio > 0.1) {
+      // Only update if we have a clear winner
+      if (mostVisibleSection && maxVisibility > 0.15) {
         setActiveSection(mostVisibleSection);
       }
     };
@@ -88,24 +89,24 @@ export default function SectionNavigator() {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       
-      // Faster scroll duration for more responsive feel (400ms instead of 650ms)
+      // Faster scroll duration for more responsive feel
       smoothScrollTo(offsetPosition, 400);
       
       // Clear scrolling flag after animation completes with buffer
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 450);
+      }, 500);
     }
   };
 
   return (
     <>
-      {/* Desktop Sidebar - Full Size (lg and up) */}
+      {/* Desktop Sidebar - Full Size (lg and up) - MOVED TO RIGHT */}
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
+        className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-2xl p-3 shadow-2xl">
           <div className="flex flex-col gap-3">
@@ -127,8 +128,8 @@ export default function SectionNavigator() {
                 >
                   <Icon className="h-5 w-5" />
                   
-                  {/* Tooltip */}
-                  <div className="absolute left-full ml-4 px-3 py-2 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  {/* Tooltip - now appears on LEFT side */}
+                  <div className="absolute right-full mr-4 px-3 py-2 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-sm font-medium text-white">{section.label}</span>
                   </div>
 
@@ -147,12 +148,12 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Tablet Sidebar - Compact (md to lg) */}
+      {/* Tablet Sidebar - Compact (md to lg) - MOVED TO RIGHT */}
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="fixed left-3 top-1/2 -translate-y-1/2 z-40 hidden md:block lg:hidden"
+        className="fixed right-3 top-1/2 -translate-y-1/2 z-40 hidden md:block lg:hidden"
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-xl p-2 shadow-xl">
           <div className="flex flex-col gap-2">
@@ -174,8 +175,8 @@ export default function SectionNavigator() {
                 >
                   <Icon className="h-4 w-4" />
                   
-                  {/* Tooltip for tablet */}
-                  <div className="absolute left-full ml-3 px-2 py-1 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  {/* Tooltip for tablet - now appears on LEFT */}
+                  <div className="absolute right-full mr-3 px-2 py-1 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-xs font-medium text-white">{section.label}</span>
                   </div>
 
@@ -194,12 +195,12 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Mobile Bottom Navigation Bar (below md) */}
+      {/* Mobile Bottom Navigation Bar (below md) - IMPROVED DETECTION */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 md:hidden"
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden"
       >
         <div className="bg-[#0B0B10]/90 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-2xl">
           <div className="flex items-center gap-2">

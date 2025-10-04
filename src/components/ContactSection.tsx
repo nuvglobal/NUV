@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Phone, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import { Mail, MessageSquare, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
@@ -207,22 +207,6 @@ export default function ContactSection() {
                       onClick={() => window.open("mailto:vex1l.vx@gmail.com", "_blank")}
                     >
                       Send Email →
-                    </Button>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
-                  <Phone className="h-6 w-6 text-[#FF3131]" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Quick Payment</h4>
-                    <p className="text-gray-400">Ready to get started?</p>
-                    <Button
-                      variant="link"
-                      className="text-[#00B2A9] p-0 h-auto hover:text-[#00B2A9]/80"
-                    >
-                      Pay Now →
                     </Button>
                   </div>
                 </div>

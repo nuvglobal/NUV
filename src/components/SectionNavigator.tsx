@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Home, Lightbulb, Briefcase, Users, Mail } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils";
 
 export default function SectionNavigator() {
   const [activeSection, setActiveSection] = useState("hero");
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const sections = [
     { id: "hero", label: "Home", icon: Home },
@@ -15,23 +16,45 @@ export default function SectionNavigator() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+    // Use Intersection Observer for more accurate section detection
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px", // Trigger when section is in the middle-upper portion of viewport
+      threshold: [0, 0.25, 0.5, 0.75, 1],
+    };
 
-      for (const section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id);
-            break;
-          }
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      // Find the most visible section
+      let maxRatio = 0;
+      let mostVisibleSection = "";
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          mostVisibleSection = entry.target.id;
         }
+      });
+
+      if (mostVisibleSection) {
+        setActiveSection(mostVisibleSection);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    observerRef.current = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element && observerRef.current) {
+        observerRef.current.observe(element);
+      }
+    });
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {

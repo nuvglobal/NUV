@@ -54,7 +54,7 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group"
+              className={`group ${index === 4 ? 'col-span-2 md:col-span-1 lg:col-span-1 md:col-start-2 max-w-md mx-auto w-full' : ''}`}
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#FF3131]/20 rounded-xl mb-3 md:mb-4 group-hover:bg-[#FF3131]/30 transition-colors">

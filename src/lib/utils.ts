@@ -11,14 +11,14 @@ export function smoothScrollTo(targetY: number, duration = 600) {
   const distance = targetY - startY;
   let startTime: number | null = null;
 
-  const easeInOutCubic = (t: number) =>
-    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  // Faster easing for more responsive feel
+  const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4);
 
   const step = (timestamp: number) => {
     if (startTime === null) startTime = timestamp;
     const elapsed = timestamp - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const eased = easeInOutCubic(progress);
+    const eased = easeOutQuart(progress);
     window.scrollTo(0, startY + distance * eased);
     if (elapsed < duration) requestAnimationFrame(step);
   };

@@ -8,7 +8,8 @@ export default function Footer() {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
-      smoothScrollTo(offsetPosition, 650);
+      // Faster scroll for instant responsiveness
+      smoothScrollTo(offsetPosition, 400);
     }
   };
 

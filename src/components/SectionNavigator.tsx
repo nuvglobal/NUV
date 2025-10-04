@@ -19,26 +19,41 @@ export default function SectionNavigator() {
     // Use Intersection Observer for more accurate section detection
     const observerOptions = {
       root: null,
-      rootMargin: "-80px 0px -40% 0px", // Account for header and better mobile detection
-      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      // Adjusted rootMargin for better mobile detection - smaller top offset, larger bottom threshold
+      rootMargin: "-100px 0px -30% 0px",
+      // More granular thresholds for smoother detection
+      threshold: [0, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       // Don't update during programmatic scrolling
       if (isScrollingRef.current) return;
 
-      // Find the most visible section
+      // Find the most visible section with better logic
       let maxRatio = 0;
       let mostVisibleSection = "";
 
       entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-          maxRatio = entry.intersectionRatio;
-          mostVisibleSection = entry.target.id;
+        if (entry.isIntersecting) {
+          // Calculate visibility score based on intersection ratio and position
+          const rect = entry.boundingClientRect;
+          const viewportHeight = window.innerHeight;
+          const elementCenter = rect.top + rect.height / 2;
+          const viewportCenter = viewportHeight / 2;
+          
+          // Prefer sections closer to viewport center
+          const centerDistance = Math.abs(elementCenter - viewportCenter);
+          const centerScore = 1 - (centerDistance / viewportHeight);
+          const visibilityScore = entry.intersectionRatio * 0.7 + centerScore * 0.3;
+
+          if (visibilityScore > maxRatio) {
+            maxRatio = visibilityScore;
+            mostVisibleSection = entry.target.id;
+          }
         }
       });
 
-      if (mostVisibleSection) {
+      if (mostVisibleSection && maxRatio > 0.1) {
         setActiveSection(mostVisibleSection);
       }
     };
@@ -66,19 +81,20 @@ export default function SectionNavigator() {
       // Set scrolling flag to prevent observer updates during scroll
       isScrollingRef.current = true;
       
-      // Immediately update active state for instant feedback
+      // Immediately update active state for instant visual feedback
       setActiveSection(sectionId);
       
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       
-      smoothScrollTo(offsetPosition, 650);
+      // Faster scroll duration for more responsive feel (400ms instead of 650ms)
+      smoothScrollTo(offsetPosition, 400);
       
-      // Clear scrolling flag after animation completes
+      // Clear scrolling flag after animation completes with buffer
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 700);
+      }, 450);
     }
   };
 

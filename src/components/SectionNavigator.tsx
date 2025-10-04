@@ -103,7 +103,7 @@ export default function SectionNavigator() {
                   {/* Active indicator */}
                   {isActive && (
                     <motion.div
-                      layoutId="activeSection"
+                      layoutId="activeSectionDesktop"
                       className="absolute inset-0 bg-[#FF3131] rounded-xl -z-10"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />

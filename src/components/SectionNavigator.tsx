@@ -16,44 +16,50 @@ export default function SectionNavigator() {
   ];
 
   useEffect(() => {
-    // Optimized Intersection Observer
+    // Enhanced Intersection Observer with better mobile detection
     const observerOptions = {
       root: null,
-      rootMargin: "-80px 0px -150px 0px",
-      threshold: [0, 0.25, 0.5, 0.75, 1.0], // Reduced thresholds for better performance
+      rootMargin: "-100px 0px -120px 0px", // Adjusted for better center detection
+      threshold: Array.from({ length: 11 }, (_, i) => i * 0.1), // 0, 0.1, 0.2, ... 1.0
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       if (isScrollingRef.current) return;
 
-      let maxVisibility = 0;
-      let mostVisibleSection = "";
+      let maxScore = 0;
+      let bestSection = "";
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const rect = entry.boundingClientRect;
           const viewportHeight = window.innerHeight;
           
+          // Calculate center position score (sections near viewport center get higher scores)
+          const sectionCenter = (rect.top + rect.bottom) / 2;
+          const viewportCenter = viewportHeight / 2;
+          const distanceFromCenter = Math.abs(sectionCenter - viewportCenter);
+          const centerScore = Math.max(0, 1 - (distanceFromCenter / viewportHeight));
+          
+          // Calculate visibility score
           const headerHeight = 80;
           const bottomNavHeight = 100;
-          const effectiveViewportHeight = viewportHeight - headerHeight - bottomNavHeight;
-          
           const visibleTop = Math.max(rect.top, headerHeight);
           const visibleBottom = Math.min(rect.bottom, viewportHeight - bottomNavHeight);
           const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+          const visibilityScore = visibleHeight / rect.height;
           
-          const visibilityRatio = visibleHeight / effectiveViewportHeight;
-          const visibility = entry.intersectionRatio * 0.6 + visibilityRatio * 0.4;
+          // Combined score: prioritize sections near center with good visibility
+          const combinedScore = (centerScore * 0.6) + (visibilityScore * 0.3) + (entry.intersectionRatio * 0.1);
 
-          if (visibility > maxVisibility) {
-            maxVisibility = visibility;
-            mostVisibleSection = entry.target.id;
+          if (combinedScore > maxScore && visibilityScore > 0.15) {
+            maxScore = combinedScore;
+            bestSection = entry.target.id;
           }
         }
       });
 
-      if (mostVisibleSection && maxVisibility > 0.2) {
-        setActiveSection(mostVisibleSection);
+      if (bestSection && maxScore > 0.3) {
+        setActiveSection(bestSection);
       }
     };
 
@@ -87,7 +93,7 @@ export default function SectionNavigator() {
       
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 500);
+      }, 450);
     }
   };
 

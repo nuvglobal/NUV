@@ -37,6 +37,7 @@ const schema = defineSchema(
       name: v.string(),
       email: v.string(),
       business: v.optional(v.string()),
+      phone: v.optional(v.string()),
       message: v.optional(v.string()),
       plan: v.optional(v.string()),
       status: v.union(v.literal("new"), v.literal("contacted"), v.literal("converted")),

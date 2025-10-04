@@ -59,12 +59,12 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             Let's Build Something{" "}
             <span className="text-[#C4B5FD] font-serif italic">Amazing</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Ready to transform your digital presence? Get in touch and let's discuss your project.
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+            Ready to transform your digital presence? Let's discuss your project.
           </p>
         </motion.div>
 

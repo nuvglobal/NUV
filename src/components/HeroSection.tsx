@@ -30,28 +30,25 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <div className="space-y-6">
-              <div className="flex items-center space-x-2 text-[#00B2A9]">
-                <Sparkles size={20} />
-                <span className="text-sm font-semibold tracking-wide uppercase">
+            <div className="space-y-5 md:space-y-6">
+              <div className="flex items-center space-x-2 text-[#FF3131]">
+                <Sparkles size={18} className="md:w-5 md:h-5" />
+                <span className="text-xs md:text-sm font-semibold tracking-wider uppercase">
                   Nexus of Unique Vision
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
                 Websites that{" "}
                 <span className="text-[#C4B5FD] font-serif italic">work</span>{" "}
                 as hard as you do.
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                At NUV, we don't just build websites. We craft digital identities
-                engineered for{" "}
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
+                We craft digital identities engineered for{" "}
                 <span className="text-[#C4B5FD] font-semibold">growth</span>,{" "}
                 <span className="text-[#C4B5FD] font-semibold">authority</span>, and{" "}
-                <span className="text-[#C4B5FD] font-semibold">trust</span>. Whether
-                you're a startup or a scaling brand, your site becomes your strongest
-                business asset.
+                <span className="text-[#C4B5FD] font-semibold">trust</span>.
               </p>
             </div>
 

@@ -14,43 +14,42 @@ export default function AboutSection() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 tracking-tight">
                 We're{" "}
-                <span className="text-[#C4B5FD] font-serif italic">NUV</span>.
+                <span className="text-[#C4B5FD] font-serif italic">NUV</span>
               </h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                We're not just developers. We're builders of the next digital order. 
-                NUV was founded with one vision: to bring businesses powerful websites 
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-5">
+                Builders of the next digital order. We bring businesses powerful websites 
                 without the corporate bloat.
               </p>
-              <p className="text-lg text-gray-400 leading-relaxed">
-                <span className="text-[#FF3D81] font-semibold">Small team</span>, 
+              <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+                <span className="text-[#FF3131] font-semibold">Small team</span>, 
                 <span className="text-[#C4B5FD] font-semibold"> sharp execution</span>, 
                 <span className="text-white font-semibold"> big results</span>.
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-4 md:gap-6">
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl mb-3 mx-auto">
-                  <Users className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-2 md:mb-3 mx-auto">
+                  <Users className="h-5 w-5 md:h-6 md:w-6 text-[#FF3131]" />
                 </div>
-                <div className="text-2xl font-bold text-white">50+</div>
-                <div className="text-sm text-gray-400">Projects</div>
+                <div className="text-xl md:text-2xl font-bold text-white">50+</div>
+                <div className="text-xs md:text-sm text-gray-400">Projects</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl mb-3 mx-auto">
-                  <Target className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-2 md:mb-3 mx-auto">
+                  <Target className="h-5 w-5 md:h-6 md:w-6 text-[#FF3131]" />
                 </div>
-                <div className="text-2xl font-bold text-white">4.9/5</div>
-                <div className="text-sm text-gray-400">Client Satisfaction</div>
+                <div className="text-xl md:text-2xl font-bold text-white">4.9/5</div>
+                <div className="text-xs md:text-sm text-gray-400">Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#00B2A9]/20 rounded-xl mb-3 mx-auto">
-                  <Rocket className="h-6 w-6 text-[#00B2A9]" />
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-2 md:mb-3 mx-auto">
+                  <Rocket className="h-5 w-5 md:h-6 md:w-6 text-[#FF3131]" />
                 </div>
-                <div className="text-2xl font-bold text-white">2x</div>
-                <div className="text-sm text-gray-400">Growth Avg</div>
+                <div className="text-xl md:text-2xl font-bold text-white">2x</div>
+                <div className="text-xs md:text-sm text-gray-400">Growth Avg</div>
               </div>
             </div>
           </motion.div>

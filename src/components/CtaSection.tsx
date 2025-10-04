@@ -31,16 +31,17 @@ export default function CtaSection() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
             Your website is your new{" "}
-            <span className="text-[#C4B5FD] font-serif italic">storefront</span>.
-            <br />
+            <span className="text-[#C4B5FD] font-serif italic">storefront</span>
+            <br className="hidden md:block" />
+            <span className="md:hidden"> </span>
             Make it unforgettable.
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
             Join businesses who trust NUV to engineer{" "}
-            <span className="text-[#FF3D81] font-semibold">growth</span>.
+            <span className="text-[#FF3131] font-semibold">growth</span>.
           </p>
 
           <motion.div

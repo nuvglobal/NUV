@@ -30,9 +30,8 @@ export default function Footer() {
                 className="h-9 w-auto rounded-md"
               />
             </motion.div>
-            <p className="text-gray-400 max-w-md leading-relaxed">
-              Nexus of Unique Vision. We craft digital identities engineered for growth, 
-              authority, and trust. Your website becomes your strongest business asset.
+            <p className="text-sm md:text-base text-gray-400 max-w-md leading-relaxed">
+              We craft digital identities engineered for growth, authority, and trust.
             </p>
           </div>
 

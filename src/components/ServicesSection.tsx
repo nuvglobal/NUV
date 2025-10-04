@@ -40,9 +40,9 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             Our Services, Your{" "}
-            <span className="text-[#C4B5FD] font-serif italic">Growth</span>.
+            <span className="text-[#C4B5FD] font-serif italic">Growth</span>
           </h2>
         </motion.div>
 
@@ -56,11 +56,11 @@ export default function ServicesSection() {
               viewport={{ once: true }}
               className={`group ${index === 4 ? 'col-span-2 md:col-span-1 lg:col-span-1 md:col-start-2 max-w-md mx-auto w-full' : ''}`}
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#FF3131]/20 rounded-xl mb-3 md:mb-4 group-hover:bg-[#FF3131]/30 transition-colors">
-                  <service.icon className="h-6 w-6 md:h-7 md:w-7 text-[#FF3131]" />
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-200 hover:scale-[1.02]">
+                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-3 group-hover:bg-[#FF3131]/30 transition-colors">
+                  <service.icon className="h-5 w-5 md:h-6 md:w-6 text-[#FF3131]" />
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 tracking-tight">
+                <h3 className="text-base md:text-lg font-bold text-white mb-2 tracking-tight">
                   {service.title}
                 </h3>
                 <p className="text-gray-300 text-xs md:text-sm leading-relaxed">

@@ -47,7 +47,7 @@ export default function Header() {
             <img
               src="https://harmless-tapir-303.convex.cloud/api/storage/fde5fd9c-bcbc-431d-86cf-6887522b39c4"
               alt="NUV logo"
-              className="h-8 w-auto rounded-md"
+              className="h-7 md:h-8 w-auto rounded-md"
             />
           </motion.div>
 

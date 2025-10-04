@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, ShoppingCart, Search, Headphones } from "lucide-react";
+import { Globe, ShoppingCart, Search, Headphones, Shield } from "lucide-react";
 
 export default function ServicesSection() {
   const services = [
@@ -17,6 +17,11 @@ export default function ServicesSection() {
       icon: Search,
       title: "SEO & Optimization",
       description: "Speed, visibility, and reach optimization for maximum impact.",
+    },
+    {
+      icon: Shield,
+      title: "Website Maintenance & Security",
+      description: "Regular updates, security patches, SSL management, and backup services.",
     },
     {
       icon: Headphones,
@@ -41,7 +46,7 @@ export default function ServicesSection() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

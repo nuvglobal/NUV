@@ -46,7 +46,7 @@ export default function ServicesSection() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -56,14 +56,14 @@ export default function ServicesSection() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-14 h-14 bg-[#FF3131]/20 rounded-xl mb-4 group-hover:bg-[#FF3131]/30 transition-colors">
-                  <service.icon className="h-7 w-7 text-[#FF3131]" />
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#FF3131]/20 rounded-xl mb-3 md:mb-4 group-hover:bg-[#FF3131]/30 transition-colors">
+                  <service.icon className="h-6 w-6 md:h-7 md:w-7 text-[#FF3131]" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 tracking-tight">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>

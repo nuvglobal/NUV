@@ -38,8 +38,7 @@ export default function WhyNuvSection() {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We're not another template factory. We're an agency that blends design,
             strategy, and tech to create websites that dominate attention. With NUV,
-            you get more than a website—you get a{" "}
-            <span className="text-[#FF3D81] font-semibold">growth weapon</span>.
+            you get more than a website, you get a growth weapon.
           </p>
         </motion.div>
 

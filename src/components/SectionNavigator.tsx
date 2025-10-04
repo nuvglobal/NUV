@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Lightbulb, Briefcase, Users, Mail } from "lucide-react";
+import { Home, Lightbulb, Briefcase, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils";
 
@@ -11,7 +11,6 @@ export default function SectionNavigator() {
     { id: "hero", label: "Home", icon: Home },
     { id: "why-nuv", label: "Why NUV", icon: Lightbulb },
     { id: "services", label: "Services", icon: Briefcase },
-    { id: "about", label: "About", icon: Users },
     { id: "contact", label: "Contact", icon: Mail },
   ];
 

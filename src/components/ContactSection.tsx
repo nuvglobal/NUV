@@ -301,7 +301,7 @@ export default function ContactSection() {
                 disabled={isSubmitting}
                 className="w-full bg-[#FF3131] hover:bg-[#FF3131]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Send Email"}
               </Button>
             </form>
           </motion.div>

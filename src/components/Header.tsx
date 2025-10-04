@@ -63,7 +63,7 @@ export default function Header() {
               onClick={() => scrollToSection("why-nuv")}
               className="text-white hover:text-[#00B2A9] transition-colors font-medium"
             >
-              Why NUV
+              What is NUV
             </button>
             <button
               onClick={() => scrollToSection("services")}
@@ -117,7 +117,7 @@ export default function Header() {
                 onClick={() => scrollToSection("why-nuv")}
                 className="text-white hover:text-[#00B2A9] transition-colors font-medium text-left"
               >
-                Why NUV
+                What is NUV
               </button>
               <button
                 onClick={() => scrollToSection("services")}

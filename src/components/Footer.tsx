@@ -52,7 +52,7 @@ export default function Footer() {
                   onClick={() => scrollToSection("why-nuv")}
                   className="text-gray-400 hover:text-[#00B2A9] transition-colors"
                 >
-                  Why NUV
+                  What is NUV
                 </button>
               </li>
               <li>

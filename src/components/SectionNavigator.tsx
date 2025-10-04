@@ -10,7 +10,7 @@ export default function SectionNavigator() {
 
   const sections = [
     { id: "hero", label: "Home", icon: Home },
-    { id: "why-nuv", label: "Why NUV", icon: Lightbulb },
+    { id: "why-nuv", label: "What is NUV", icon: Lightbulb },
     { id: "services", label: "Services", icon: Briefcase },
     { id: "contact", label: "Contact", icon: Mail },
   ];

@@ -31,9 +31,8 @@ export default function WhyNuvSection() {
           className="text-center mb-16"
         >
           <h2 className="mt-8 md:mt-12 text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 tracking-tight">
-            The{" "}
-            <span className="text-[#C4B5FD] font-serif italic">Nexus</span>{" "}
-            of Unique Vision
+            What is{" "}
+            <span className="text-[#C4B5FD] font-serif italic">NUV</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We blend design, strategy, and tech to create websites that dominate attention. 

@@ -15,14 +15,14 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-[22vh] md:min-h-[26vh] bg-[#0B0B10] relative overflow-hidden">
+    <section id="hero" className="min-h-[22vh] md:min-h-[26vh] pt-20 md:pt-0 bg-[#0B0B10] relative overflow-hidden">
       {/* Simplified background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00B2A9]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#F7E7CE]/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-1 md:pt-8 md:pb-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-1 md:pt-8 md:pb-2">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

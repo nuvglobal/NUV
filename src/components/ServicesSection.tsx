@@ -78,12 +78,12 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-[#FF3D81]/10 to-[#C4B5FD]/10 border border-[#FF3D81]/20 rounded-xl p-6 max-w-2xl mx-auto">
-            <h4 className="text-lg font-semibold text-[#C4B5FD] mb-2">
+          <div className="bg-gradient-to-r from-[#D4AF37]/10 to-[#4A5568]/10 border border-[#D4AF37]/30 rounded-xl p-6 max-w-2xl mx-auto">
+            <h4 className="text-lg font-semibold text-[#D4AF37] mb-2">
               Optional Upsell Add-on
             </h4>
             <p className="text-gray-300">
-              <span className="text-[#00B2A9] font-semibold">Minimal Ads Integration</span> – 
+              <span className="text-[#D4AF37] font-semibold">Minimal Ads Integration</span> – 
               Offset costs with subtle ad placements that don't compromise your brand.
             </p>
           </div>

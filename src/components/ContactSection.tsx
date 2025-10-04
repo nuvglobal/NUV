@@ -356,8 +356,8 @@ export default function ContactSection() {
               </div>
             </div>
 
-              <div className="bg-gradient-to-br from-[#D72638]/10 to-[#1E1E1E]/10 border border-[#D72638]/20 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-[#D72638] mb-2">
+              <div className="bg-gradient-to-br from-[#4A5568]/10 to-[#1E1E1E]/10 border border-[#4A5568]/30 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-[#4A5568] mb-2">
                 Response Time
               </h4>
               <p className="text-[#B3B3B3] text-sm">

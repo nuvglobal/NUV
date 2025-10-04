@@ -32,6 +32,8 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-gold: var(--gold);
+  --color-steel: var(--steel);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -68,6 +70,8 @@
   --chart-3: oklch(0.48 0 0);
   --chart-4: oklch(0.3 0.08 250);
   --chart-5: oklch(0.48 0 0);
+  --gold: oklch(0.72 0.12 85); /* Warm Gold #D4AF37 */
+  --steel: oklch(0.42 0.02 250); /* Steel Blue #4A5568 */
   --sidebar: oklch(0.08 0 0);
   --sidebar-foreground: oklch(1 0 0);
   --sidebar-primary: oklch(0.52 0.22 25);
@@ -102,6 +106,8 @@
   --chart-3: oklch(0.48 0 0);
   --chart-4: oklch(0.3 0.08 250);
   --chart-5: oklch(0.48 0 0);
+  --gold: oklch(0.72 0.12 85);
+  --steel: oklch(0.42 0.02 250);
   --sidebar: oklch(0.08 0 0);
   --sidebar-foreground: oklch(1 0 0);
   --sidebar-primary: oklch(0.52 0.22 25);

@@ -16,34 +16,42 @@ export default function SectionNavigator() {
   ];
 
   useEffect(() => {
-    // Use Intersection Observer for more accurate section detection
+    // Enhanced Intersection Observer with mobile-optimized settings
     const observerOptions = {
       root: null,
-      // Better mobile detection - adjusted for bottom navigation bar
-      rootMargin: "-80px 0px -120px 0px",
-      // More granular thresholds for smoother detection
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+      // Adjusted for mobile bottom bar (100px) and header (80px)
+      rootMargin: "-80px 0px -150px 0px",
+      // Very granular thresholds for precise detection
+      threshold: Array.from({ length: 21 }, (_, i) => i * 0.05), // 0, 0.05, 0.1, ..., 1.0
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       // Don't update during programmatic scrolling
       if (isScrollingRef.current) return;
 
-      // Find the most visible section with better logic
+      // Enhanced visibility scoring algorithm
       let maxVisibility = 0;
       let mostVisibleSection = "";
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Calculate visibility score based on intersection ratio and viewport position
           const rect = entry.boundingClientRect;
           const viewportHeight = window.innerHeight;
           
-          // Calculate how much of the section is visible
-          const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-          const visibilityRatio = visibleHeight / viewportHeight;
+          // Account for header and bottom nav bar
+          const headerHeight = 80;
+          const bottomNavHeight = 100; // Mobile bottom nav
+          const effectiveViewportHeight = viewportHeight - headerHeight - bottomNavHeight;
           
-          // Prefer sections that occupy more viewport space
+          // Calculate visible portion within effective viewport
+          const visibleTop = Math.max(rect.top, headerHeight);
+          const visibleBottom = Math.min(rect.bottom, viewportHeight - bottomNavHeight);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+          
+          // Visibility ratio based on effective viewport
+          const visibilityRatio = visibleHeight / effectiveViewportHeight;
+          
+          // Combined score: intersection ratio (60%) + viewport visibility (40%)
           const visibility = entry.intersectionRatio * 0.6 + visibilityRatio * 0.4;
 
           if (visibility > maxVisibility) {
@@ -53,8 +61,8 @@ export default function SectionNavigator() {
         }
       });
 
-      // Only update if we have a clear winner
-      if (mostVisibleSection && maxVisibility > 0.15) {
+      // Update only if we have a clear winner with sufficient visibility
+      if (mostVisibleSection && maxVisibility > 0.2) {
         setActiveSection(mostVisibleSection);
       }
     };
@@ -95,13 +103,13 @@ export default function SectionNavigator() {
       // Clear scrolling flag after animation completes with buffer
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 500);
+      }, 600); // Increased timeout for better stability
     }
   };
 
   return (
     <>
-      {/* Desktop Sidebar - Full Size (lg and up) - MOVED TO RIGHT */}
+      {/* Desktop Sidebar - Full Size (lg and up) - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -128,7 +136,7 @@ export default function SectionNavigator() {
                 >
                   <Icon className="h-5 w-5" />
                   
-                  {/* Tooltip - now appears on LEFT side */}
+                  {/* Tooltip - appears on LEFT side */}
                   <div className="absolute right-full mr-4 px-3 py-2 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-sm font-medium text-white">{section.label}</span>
                   </div>
@@ -148,7 +156,7 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Tablet Sidebar - Compact (md to lg) - MOVED TO RIGHT */}
+      {/* Tablet Sidebar - Compact (md to lg) - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -175,7 +183,7 @@ export default function SectionNavigator() {
                 >
                   <Icon className="h-4 w-4" />
                   
-                  {/* Tooltip for tablet - now appears on LEFT */}
+                  {/* Tooltip for tablet - appears on LEFT */}
                   <div className="absolute right-full mr-3 px-2 py-1 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-xs font-medium text-white">{section.label}</span>
                   </div>
@@ -195,7 +203,7 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Mobile Bottom Navigation Bar (below md) - IMPROVED DETECTION */}
+      {/* Mobile Bottom Navigation Bar (below md) - ENHANCED DETECTION */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

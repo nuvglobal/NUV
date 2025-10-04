@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import SectionNavigator from "@/components/SectionNavigator";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Landing() {
@@ -13,6 +14,19 @@ export default function Landing() {
   const ySlow = useTransform(scrollY, [0, 1000], [0, -100]);
   const yFast = useTransform(scrollY, [0, 1000], [0, -200]);
   const rotate = useTransform(scrollY, [0, 1000], [0, 45]);
+
+  // Section transition variants
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
     <motion.div
@@ -55,12 +69,87 @@ export default function Landing() {
       </div>
 
       <Header />
-      <HeroSection />
-      <WhyNuvSection />
-      <ServicesSection />
-      <AboutSection />
-      <CtaSection />
-      <ContactSection />
+      <SectionNavigator />
+      
+      {/* Hero with fade in */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <HeroSection />
+      </motion.div>
+
+      {/* Section Divider */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
+
+      {/* Why NUV with slide up */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+        className="relative"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#C4B5FD]/5 to-transparent pointer-events-none" />
+        <WhyNuvSection />
+      </motion.div>
+
+      {/* Section Divider */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-[#C4B5FD]/30 to-transparent" />
+
+      {/* Services with slide up */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+        className="relative"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FF3131]/5 to-transparent pointer-events-none" />
+        <ServicesSection />
+      </motion.div>
+
+      {/* Section Divider */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
+
+      {/* About with slide up */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <AboutSection />
+      </motion.div>
+
+      {/* Section Divider */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-[#C4B5FD]/30 to-transparent" />
+
+      {/* CTA with slide up */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <CtaSection />
+      </motion.div>
+
+      {/* Section Divider */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
+
+      {/* Contact with slide up */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <ContactSection />
+      </motion.div>
+
       <Footer />
     </motion.div>
   );

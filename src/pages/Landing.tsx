@@ -74,7 +74,7 @@ export default function Landing() {
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionVariants}
       >
-        <ServicesSection />
+        <AboutSection />
       </motion.div>
 
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
@@ -85,7 +85,7 @@ export default function Landing() {
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionVariants}
       >
-        <AboutSection />
+        <ServicesSection />
       </motion.div>
 
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#C4B5FD]/30 to-transparent" />

@@ -15,17 +15,17 @@ export default function AboutSection() {
           >
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 tracking-tight">
-                We're{" "}
+                Why Choose{" "}
                 <span className="text-[#C4B5FD] font-serif italic">NUV</span>
               </h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-5">
-                Builders of the next digital order. We bring businesses powerful websites 
-                without the corporate bloat.
+                We're a lean team that delivers enterprise-level results without the overhead. 
+                Every project gets our full attention and expertise.
               </p>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-                <span className="text-[#FF3131] font-semibold">Small team</span>, 
-                <span className="text-[#C4B5FD] font-semibold"> sharp execution</span>, 
-                <span className="text-white font-semibold"> big results</span>.
+                <span className="text-[#FF3131] font-semibold">Proven track record</span>, 
+                <span className="text-[#C4B5FD] font-semibold"> fast execution</span>, 
+                <span className="text-white font-semibold"> measurable growth</span>.
               </p>
             </div>
 

@@ -330,7 +330,7 @@ export default function ContactSection() {
                     <Button
                       variant="link"
                       className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
-                      onClick={() => window.open("https://wa.me/918904009869", "_blank")}
+                      onClick={() => window.open("https://wa.me/917876079309", "_blank")}
                     >
                       Start Chat →
                     </Button>

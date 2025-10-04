@@ -16,20 +16,16 @@ export default function SectionNavigator() {
   ];
 
   useEffect(() => {
-    // Enhanced Intersection Observer with mobile-optimized settings
+    // Optimized Intersection Observer
     const observerOptions = {
       root: null,
-      // Adjusted for mobile bottom bar (100px) and header (80px)
       rootMargin: "-80px 0px -150px 0px",
-      // Very granular thresholds for precise detection
-      threshold: Array.from({ length: 21 }, (_, i) => i * 0.05), // 0, 0.05, 0.1, ..., 1.0
+      threshold: [0, 0.25, 0.5, 0.75, 1.0], // Reduced thresholds for better performance
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      // Don't update during programmatic scrolling
       if (isScrollingRef.current) return;
 
-      // Enhanced visibility scoring algorithm
       let maxVisibility = 0;
       let mostVisibleSection = "";
 
@@ -38,20 +34,15 @@ export default function SectionNavigator() {
           const rect = entry.boundingClientRect;
           const viewportHeight = window.innerHeight;
           
-          // Account for header and bottom nav bar
           const headerHeight = 80;
-          const bottomNavHeight = 100; // Mobile bottom nav
+          const bottomNavHeight = 100;
           const effectiveViewportHeight = viewportHeight - headerHeight - bottomNavHeight;
           
-          // Calculate visible portion within effective viewport
           const visibleTop = Math.max(rect.top, headerHeight);
           const visibleBottom = Math.min(rect.bottom, viewportHeight - bottomNavHeight);
           const visibleHeight = Math.max(0, visibleBottom - visibleTop);
           
-          // Visibility ratio based on effective viewport
           const visibilityRatio = visibleHeight / effectiveViewportHeight;
-          
-          // Combined score: intersection ratio (60%) + viewport visibility (40%)
           const visibility = entry.intersectionRatio * 0.6 + visibilityRatio * 0.4;
 
           if (visibility > maxVisibility) {
@@ -61,7 +52,6 @@ export default function SectionNavigator() {
         }
       });
 
-      // Update only if we have a clear winner with sufficient visibility
       if (mostVisibleSection && maxVisibility > 0.2) {
         setActiveSection(mostVisibleSection);
       }
@@ -69,7 +59,6 @@ export default function SectionNavigator() {
 
     observerRef.current = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Observe all sections
     sections.forEach((section) => {
       const element = document.getElementById(section.id);
       if (element && observerRef.current) {
@@ -87,33 +76,28 @@ export default function SectionNavigator() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Set scrolling flag to prevent observer updates during scroll
       isScrollingRef.current = true;
-      
-      // Immediately update active state for instant visual feedback
       setActiveSection(sectionId);
       
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       
-      // Faster scroll duration for more responsive feel
       smoothScrollTo(offsetPosition, 400);
       
-      // Clear scrolling flag after animation completes with buffer
       setTimeout(() => {
         isScrollingRef.current = false;
-      }, 600); // Increased timeout for better stability
+      }, 500);
     }
   };
 
   return (
     <>
-      {/* Desktop Sidebar - Full Size (lg and up) - RIGHT SIDE */}
+      {/* Desktop Sidebar - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 0.4 }}
         className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-2xl p-3 shadow-2xl">
@@ -126,27 +110,25 @@ export default function SectionNavigator() {
                 <motion.button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`group relative p-3 rounded-xl transition-all duration-300 ${
+                  className={`group relative p-3 rounded-xl transition-all duration-200 ${
                     isActive 
                       ? "bg-[#FF3131] text-white" 
                       : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
                   }`}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Icon className="h-5 w-5" />
                   
-                  {/* Tooltip - appears on LEFT side */}
                   <div className="absolute right-full mr-4 px-3 py-2 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-sm font-medium text-white">{section.label}</span>
                   </div>
 
-                  {/* Active indicator */}
                   {isActive && (
                     <motion.div
                       layoutId="activeSectionDesktop"
                       className="absolute inset-0 bg-[#FF3131] rounded-xl -z-10"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
                 </motion.button>
@@ -156,11 +138,11 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Tablet Sidebar - Compact (md to lg) - RIGHT SIDE */}
+      {/* Tablet Sidebar - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 0.4 }}
         className="fixed right-3 top-1/2 -translate-y-1/2 z-40 hidden md:block lg:hidden"
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-xl p-2 shadow-xl">
@@ -173,27 +155,25 @@ export default function SectionNavigator() {
                 <motion.button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`group relative p-2 rounded-lg transition-all duration-300 ${
+                  className={`group relative p-2 rounded-lg transition-all duration-200 ${
                     isActive 
                       ? "bg-[#FF3131] text-white" 
                       : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
                   }`}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Icon className="h-4 w-4" />
                   
-                  {/* Tooltip for tablet - appears on LEFT */}
                   <div className="absolute right-full mr-3 px-2 py-1 bg-[#0B0B10] border border-white/10 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <span className="text-xs font-medium text-white">{section.label}</span>
                   </div>
 
-                  {/* Active indicator */}
                   {isActive && (
                     <motion.div
                       layoutId="activeSectionTablet"
                       className="absolute inset-0 bg-[#FF3131] rounded-lg -z-10"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
                 </motion.button>
@@ -203,11 +183,11 @@ export default function SectionNavigator() {
         </div>
       </motion.div>
 
-      {/* Mobile Bottom Navigation Bar (below md) - ENHANCED DETECTION */}
+      {/* Mobile Bottom Navigation Bar */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 0.4 }}
         className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden"
       >
         <div className="bg-[#0B0B10]/90 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-2xl">
@@ -220,7 +200,7 @@ export default function SectionNavigator() {
                 <motion.button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`relative p-2.5 rounded-full transition-all duration-300 ${
+                  className={`relative p-2.5 rounded-full transition-all duration-200 ${
                     isActive 
                       ? "bg-[#FF3131] text-white" 
                       : "bg-white/5 text-gray-400"
@@ -229,12 +209,11 @@ export default function SectionNavigator() {
                 >
                   <Icon className="h-5 w-5" />
 
-                  {/* Active indicator */}
                   {isActive && (
                     <motion.div
                       layoutId="activeSectionMobile"
                       className="absolute inset-0 bg-[#FF3131] rounded-full -z-10"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
                 </motion.button>

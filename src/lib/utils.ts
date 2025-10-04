@@ -5,13 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Add robust smooth scrolling helper with easing (used across the app)
-export function smoothScrollTo(targetY: number, duration = 600) {
+// Optimized smooth scrolling with faster easing
+export function smoothScrollTo(targetY: number, duration = 400) {
   const startY = window.scrollY || window.pageYOffset;
   const distance = targetY - startY;
   let startTime: number | null = null;
 
-  // Faster easing for more responsive feel
+  // Faster easing for snappier feel
   const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4);
 
   const step = (timestamp: number) => {

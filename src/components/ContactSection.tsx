@@ -356,11 +356,11 @@ export default function ContactSection() {
               </div>
             </div>
 
-              <div className="bg-gradient-to-br from-[#4A5568]/10 to-[#1E1E1E]/10 border border-[#4A5568]/30 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-[#4A5568] mb-2">
+              <div className="bg-gradient-to-br from-[#4A5568]/20 to-[#1E1E1E]/30 border border-[#4A5568]/50 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-[#7A9BB8] mb-2">
                 Response Time
               </h4>
-              <p className="text-[#B3B3B3] text-sm">
+              <p className="text-gray-300 text-sm">
                 We typically respond within 2-4 hours during business hours (9 AM - 6 PM IST).
                 For urgent projects, WhatsApp is your fastest option.
               </p>

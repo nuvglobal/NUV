@@ -5,7 +5,7 @@ import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import { useState } from "react";
-import { useMutation } from "convex/react";
+import { useMutation, useAction } from "convex/react";
 import { toast } from "sonner";
 
 export default function ContactSection() {
@@ -20,19 +20,26 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const createContact = useMutation(api.contacts.create);
+  const sendContactEmail = useAction(api.emails.sendContactEmail);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      await createContact({
+      const contactData = {
         name: formData.name,
         email: formData.email,
         business: formData.business || undefined,
         phone: formData.phone ? `${formData.countryCode}${formData.phone}` : undefined,
         message: formData.message || undefined,
-      });
+      };
+
+      // Save to database
+      await createContact(contactData);
+
+      // Send email notification
+      await sendContactEmail(contactData);
 
       toast.success("Message sent successfully! We'll get back to you soon.");
       setFormData({
@@ -44,6 +51,7 @@ export default function ContactSection() {
         message: "",
       });
     } catch (error) {
+      console.error("Form submission error:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);

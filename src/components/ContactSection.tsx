@@ -63,7 +63,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0B0B10]">
+    <section id="contact" className="py-20 bg-[#0A0A0A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -74,7 +74,7 @@ export default function ContactSection() {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             Let's Build Something{" "}
-            <span className="text-[#C4B5FD] font-serif italic">Amazing</span>
+            <span className="text-[#D72638] font-serif italic">Amazing</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
             Ready to transform your digital presence? Let's discuss your project.
@@ -99,7 +99,7 @@ export default function ContactSection() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
-                    className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9]"
+                    className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#D72638]"
                     placeholder="Your name"
                     required
                   />
@@ -112,7 +112,7 @@ export default function ContactSection() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9]"
+                    className="bg-white/5 border-white/10 text-white placeholder-[#B3B3B3] focus:border-[#D72638]"
                     placeholder="your@email.com"
                     required
                   />
@@ -127,7 +127,7 @@ export default function ContactSection() {
                   type="text"
                   value={formData.business}
                   onChange={(e) => handleInputChange("business", e.target.value)}
-                  className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9]"
+                  className="bg-white/5 border-white/10 text-white placeholder-[#B3B3B3] focus:border-[#D72638]"
                   placeholder="Your business name"
                 />
               </div>
@@ -140,7 +140,7 @@ export default function ContactSection() {
                   <select
                     value={formData.countryCode}
                     onChange={(e) => handleInputChange("countryCode", e.target.value)}
-                    className="bg-white/5 border border-white/10 text-white rounded-lg px-3 py-2 focus:border-[#00B2A9] focus:outline-none focus:ring-1 focus:ring-[#00B2A9] w-24"
+                    className="bg-white/5 border border-white/10 text-white rounded-lg px-3 py-2 focus:border-[#D72638] focus:outline-none focus:ring-1 focus:ring-[#D72638] w-24"
                   >
                     <option value="+93">🇦🇫 +93</option>
                     <option value="+355">🇦🇱 +355</option>
@@ -279,7 +279,7 @@ export default function ContactSection() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value.replace(/\D/g, ""))}
-                    className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9] flex-1"
+                    className="bg-white/5 border-white/10 text-white placeholder-[#B3B3B3] focus:border-[#D72638] flex-1"
                   />
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function ContactSection() {
                 <Textarea
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9] min-h-[120px]"
+                  className="bg-white/5 border-white/10 text-white placeholder-[#B3B3B3] focus:border-[#D72638] min-h-[120px]"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -299,7 +299,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#FF3131] hover:bg-[#FF3131]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                className="w-full bg-[#D72638] hover:bg-[#D72638]/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
               >
                 {isSubmitting ? "Sending..." : "Send Email"}
               </Button>
@@ -321,15 +321,15 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3131]/20 rounded-xl">
-                  <MessageSquare className="h-6 w-6 text-[#FF3131]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#D72638]/20 rounded-xl">
+                  <MessageSquare className="h-6 w-6 text-[#D72638]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">WhatsApp</h4>
                     <p className="text-gray-400">Direct chat for quick questions</p>
                     <Button
                       variant="link"
-                      className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
+                      className="text-[#D72638] p-0 h-auto hover:text-[#D72638]/80"
                       onClick={() => window.open("https://wa.me/917876079309", "_blank")}
                     >
                       Start Chat →
@@ -338,15 +338,15 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#FF3D81]/20 rounded-xl">
-                  <Mail className="h-6 w-6 text-[#FF3131]" />
+                <div className="flex items-center justify-center w-12 h-12 bg-[#D72638]/20 rounded-xl">
+                  <Mail className="h-6 w-6 text-[#D72638]" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
                     <p className="text-gray-400">thenuvhq@gmail.com</p>
                     <Button
                       variant="link"
-                      className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
+                      className="text-[#D72638] p-0 h-auto hover:text-[#D72638]/80"
                       onClick={() => window.open("mailto:thenuvhq@gmail.com", "_blank")}
                     >
                       Send Email →
@@ -356,11 +356,11 @@ export default function ContactSection() {
               </div>
             </div>
 
-              <div className="bg-gradient-to-br from-[#FF3D81]/10 to-[#C4B5FD]/10 border border-[#FF3D81]/20 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-[#C4B5FD] mb-2">
+              <div className="bg-gradient-to-br from-[#D72638]/10 to-[#1E1E1E]/10 border border-[#D72638]/20 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-[#D72638] mb-2">
                 Response Time
               </h4>
-              <p className="text-gray-300 text-sm">
+              <p className="text-[#B3B3B3] text-sm">
                 We typically respond within 2-4 hours during business hours (9 AM - 6 PM IST).
                 For urgent projects, WhatsApp is your fastest option.
               </p>
@@ -369,28 +369,28 @@ export default function ContactSection() {
             {/* Social Profiles */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Social Profiles</h3>
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-[#B3B3B3] text-sm mb-4">
                 Follow us for updates and case studies.
               </p>
               <div className="flex items-center gap-4">
                 <a href="#" aria-label="Instagram" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
-                    <Instagram className="h-6 w-6 text-[#FF3131]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
+                    <Instagram className="h-6 w-6 text-[#D72638]" />
                   </div>
                 </a>
                 <a href="#" aria-label="Twitter" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
-                    <Twitter className="h-6 w-6 text-[#FF3131]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
+                    <Twitter className="h-6 w-6 text-[#D72638]" />
                   </div>
                 </a>
                 <a href="#" aria-label="Facebook" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
-                    <Facebook className="h-6 w-6 text-[#FF3131]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
+                    <Facebook className="h-6 w-6 text-[#D72638]" />
                   </div>
                 </a>
                 <a href="#" aria-label="YouTube" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#FF3131]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#FF3131]/30 transition-colors">
-                    <Youtube className="h-6 w-6 text-[#FF3131]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
+                    <Youtube className="h-6 w-6 text-[#D72638]" />
                   </div>
                 </a>
               </div>

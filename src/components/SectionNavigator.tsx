@@ -5,6 +5,7 @@ import { smoothScrollTo } from "@/lib/utils";
 
 export default function SectionNavigator() {
   const [activeSection, setActiveSection] = useState("hero");
+  const [isVisible, setIsVisible] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const isScrollingRef = useRef(false);
 
@@ -16,6 +17,24 @@ export default function SectionNavigator() {
   ];
 
   useEffect(() => {
+    // Footer visibility observer
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(!entry.isIntersecting);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    const footerElement = document.querySelector('footer');
+    if (footerElement) {
+      footerObserver.observe(footerElement);
+    }
+
     // Enhanced Intersection Observer with better mobile detection
     const observerOptions = {
       root: null,
@@ -76,6 +95,9 @@ export default function SectionNavigator() {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
+      if (footerElement) {
+        footerObserver.disconnect();
+      }
     };
   }, []);
 
@@ -102,9 +124,10 @@ export default function SectionNavigator() {
       {/* Desktop Sidebar - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        animate={{ x: 0, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.4 }}
         className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
+        style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-2xl p-3 shadow-2xl">
           <div className="flex flex-col gap-3">
@@ -147,9 +170,10 @@ export default function SectionNavigator() {
       {/* Tablet Sidebar - RIGHT SIDE */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        animate={{ x: 0, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.4 }}
         className="fixed right-3 top-1/2 -translate-y-1/2 z-40 hidden md:block lg:hidden"
+        style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
       >
         <div className="bg-[#0B0B10]/80 backdrop-blur-md border border-white/10 rounded-xl p-2 shadow-xl">
           <div className="flex flex-col gap-2">
@@ -192,9 +216,10 @@ export default function SectionNavigator() {
       {/* Mobile Bottom Navigation Bar */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.4 }}
         className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden"
+        style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
       >
         <div className="bg-[#0B0B10]/90 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 shadow-2xl">
           <div className="flex items-center gap-2">

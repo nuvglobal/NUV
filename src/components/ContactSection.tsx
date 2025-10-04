@@ -343,11 +343,11 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-gray-400">vex1l.vx@gmail.com</p>
+                    <p className="text-gray-400">thenuvhq@gmail.com</p>
                     <Button
                       variant="link"
                       className="text-[#FF3131] p-0 h-auto hover:text-[#FF3131]/80"
-                      onClick={() => window.open("mailto:vex1l.vx@gmail.com", "_blank")}
+                      onClick={() => window.open("mailto:thenuvhq@gmail.com", "_blank")}
                     >
                       Send Email →
                     </Button>

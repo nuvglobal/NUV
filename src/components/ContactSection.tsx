@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
@@ -15,7 +14,6 @@ export default function ContactSection() {
     email: "",
     business: "",
     message: "",
-    plan: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -31,7 +29,6 @@ export default function ContactSection() {
         email: formData.email,
         business: formData.business || undefined,
         message: formData.message || undefined,
-        plan: formData.plan || undefined,
       });
 
       toast.success("Message sent successfully! We'll get back to you soon.");
@@ -40,7 +37,6 @@ export default function ContactSection() {
         email: "",
         business: "",
         message: "",
-        plan: "",
       });
     } catch (error) {
       toast.error("Failed to send message. Please try again.");
@@ -110,35 +106,17 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Business/Company
-                  </label>
-                  <Input
-                    type="text"
-                    value={formData.business}
-                    onChange={(e) => handleInputChange("business", e.target.value)}
-                    className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9]"
-                    placeholder="Your business name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Interested Plan
-                  </label>
-                  <Select value={formData.plan} onValueChange={(value) => handleInputChange("plan", value)}>
-                    <SelectTrigger className="bg-white/5 border-white/10 text-white">
-                      <SelectValue placeholder="Select a plan" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="essential">Essential - ₹25,000</SelectItem>
-                      <SelectItem value="growth">Growth - ₹75,000</SelectItem>
-                      <SelectItem value="authority">Authority - ₹1,50,000</SelectItem>
-                      <SelectItem value="custom">Custom Solution</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Business/Company
+                </label>
+                <Input
+                  type="text"
+                  value={formData.business}
+                  onChange={(e) => handleInputChange("business", e.target.value)}
+                  className="bg-white/5 border-white/10 text-white placeholder-gray-400 focus:border-[#00B2A9]"
+                  placeholder="Your business name"
+                />
               </div>
 
               <div>

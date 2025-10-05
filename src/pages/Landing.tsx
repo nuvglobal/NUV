@@ -78,17 +78,17 @@ export default function Landing() {
                 <img
                   src="https://harmless-tapir-303.convex.cloud/api/storage/fde5fd9c-bcbc-431d-86cf-6887522b39c4"
                   alt="NUV logo"
-                  className="h-16 w-auto rounded-lg"
+                  className="h-20 w-auto rounded-lg"
                 />
               </div>
 
               {/* Main Announcement */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="text-6xl md:text-7xl font-bold leading-tight text-center"
+                  className="text-4xl md:text-5xl font-bold leading-tight text-center whitespace-nowrap"
                 >
                   <span className="font-serif italic text-[#D72638]">NUV</span>{" "}
                   <span className="text-white font-bold">IS LIVE</span>
@@ -98,7 +98,7 @@ export default function Landing() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-lg text-gray-300 max-w-sm mx-auto leading-relaxed text-center"
+                  className="text-sm text-gray-300 max-w-sm mx-auto leading-relaxed text-center"
                 >
                   Your digital transformation starts here. Websites that actually work.
                 </motion.p>
@@ -111,7 +111,7 @@ export default function Landing() {
                 transition={{ delay: 0.6 }}
                 className="pt-6 border-t border-white/10"
               >
-                <p className="text-[#D4AF37] font-semibold text-lg tracking-wide">
+                <p className="text-[#D4AF37] font-semibold text-base tracking-wide">
                   nuvglobal.netlify.app
                 </p>
               </motion.div>

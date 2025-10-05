@@ -88,11 +88,9 @@ export default function Landing() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-block"
+                  className="flex justify-center"
                 >
-                  <div className="bg-[#D72638] text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider uppercase">
-                    🎉 Now Live
-                  </div>
+                  <div className="bg-[#D72638] h-1 w-32 rounded-full" />
                 </motion.div>
 
                 <motion.h1
@@ -101,9 +99,7 @@ export default function Landing() {
                   transition={{ delay: 0.3 }}
                   className="text-5xl md:text-6xl font-bold text-white leading-tight"
                 >
-                  NUV
-                  <br />
-                  <span className="text-[#D72638] font-serif italic">IS LIVE</span>
+                  NUV <span className="text-[#D72638] font-serif italic">IS LIVE</span>
                 </motion.h1>
 
                 <motion.p
@@ -115,18 +111,6 @@ export default function Landing() {
                   Your digital transformation starts here. Websites that actually work.
                 </motion.p>
               </div>
-
-              {/* Decorative elements */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="flex justify-center gap-2"
-              >
-                <div className="w-2 h-2 bg-[#D72638] rounded-full animate-pulse" />
-                <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-                <div className="w-2 h-2 bg-[#D72638] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-              </motion.div>
 
               {/* Website URL */}
               <motion.div

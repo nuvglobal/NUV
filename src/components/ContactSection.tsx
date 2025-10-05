@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import { Mail, MessageSquare, Instagram } from "lucide-react";
 import { useState } from "react";
 import { useMutation, useAction } from "convex/react";
 import { toast } from "sonner";
@@ -373,24 +373,16 @@ export default function ContactSection() {
                 See our latest work and client success stories.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#" aria-label="Instagram" className="group">
+                <a href="https://www.instagram.com/nuv.hq?igsh=MTJ0bDkwYnQ3aW9xZQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="group">
                   <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
                     <Instagram className="h-6 w-6 text-[#D72638]" />
                   </div>
                 </a>
-                <a href="#" aria-label="Twitter" className="group">
+                <a href="https://x.com/NUVglobal?t=7fz6z6j9J5M-05X862vnnA&s=09" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)" className="group">
                   <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
-                    <Twitter className="h-6 w-6 text-[#D72638]" />
-                  </div>
-                </a>
-                <a href="#" aria-label="Facebook" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
-                    <Facebook className="h-6 w-6 text-[#D72638]" />
-                  </div>
-                </a>
-                <a href="#" aria-label="YouTube" className="group">
-                  <div className="w-12 h-12 rounded-xl bg-[#D72638]/20 flex items-center justify-center border border-white/10 group-hover:bg-[#D72638]/30 transition-colors">
-                    <Youtube className="h-6 w-6 text-[#D72638]" />
+                    <svg className="h-6 w-6 text-[#D72638]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
                   </div>
                 </a>
               </div>

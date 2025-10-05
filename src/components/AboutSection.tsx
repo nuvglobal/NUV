@@ -26,7 +26,7 @@ export default function AboutSection() {
           {/* Story Layout: The Problem → The Solution */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-12">
             {/* The Problem */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(179,179,179,0.1)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center justify-center w-10 h-10 bg-[#B3B3B3]/20 rounded-lg">
                   <AlertCircle className="h-5 w-5 text-[#B3B3B3]" />
@@ -42,7 +42,7 @@ export default function AboutSection() {
             </div>
 
             {/* The Solution */}
-            <div className="bg-gradient-to-br from-[#D72638]/10 to-[#D4AF37]/5 backdrop-blur-sm border border-[#D72638]/30 rounded-xl p-6 md:p-8 hover:border-[#D72638]/50 transition-all duration-300">
+            <div className="bg-gradient-to-br from-[#D72638]/10 to-[#D4AF37]/5 backdrop-blur-sm border border-[#D72638]/30 rounded-xl p-6 md:p-8 hover:border-[#D72638]/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(215,38,56,0.2)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center justify-center w-10 h-10 bg-[#D72638]/20 rounded-lg">
                   <Zap className="h-5 w-5 text-[#D72638]" />

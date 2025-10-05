@@ -56,8 +56,8 @@ export default function ServicesSection() {
               viewport={{ once: true }}
               className={`group ${index === 4 ? 'col-span-2 md:col-span-1 lg:col-span-1 md:col-start-2 max-w-md mx-auto w-full' : ''}`}
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-200 hover:scale-[1.02]">
-                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-3 group-hover:bg-[#FF3131]/30 transition-colors">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/10 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(196,181,253,0.15)]">
+                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-3 group-hover:bg-[#FF3131]/30 transition-colors group-hover:scale-110 duration-300">
                   <service.icon className="h-5 w-5 md:h-6 md:w-6 text-[#FF3131]" />
                 </div>
                 <h3 className="text-base md:text-lg font-bold text-white mb-2 tracking-tight">
@@ -78,7 +78,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-[#D4AF37]/10 to-[#4A5568]/10 border border-[#D4AF37]/30 rounded-xl p-6 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-[#D4AF37]/10 to-[#4A5568]/10 border border-[#D4AF37]/30 rounded-xl p-6 max-w-2xl mx-auto hover:border-[#D4AF37]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]">
             <h4 className="text-lg font-semibold text-[#D4AF37] mb-2">
               Optional Upsell Add-on
             </h4>

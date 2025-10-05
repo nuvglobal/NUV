@@ -50,8 +50,8 @@ export default function WhyNuvSection() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-6 md:p-8 h-full hover:bg-white/10 transition-all duration-200 hover:scale-[1.02]">
-                <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-4 md:mb-5 group-hover:bg-[#FF3131]/30 transition-colors">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-6 md:p-8 h-full hover:bg-white/10 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(215,38,56,0.15)]">
+                <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#FF3131]/20 rounded-lg md:rounded-xl mb-4 md:mb-5 group-hover:bg-[#FF3131]/30 transition-colors group-hover:scale-110 duration-300">
                   <value.icon className="h-6 w-6 md:h-7 md:w-7 text-[#FF3131]" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 tracking-tight">

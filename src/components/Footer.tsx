@@ -14,8 +14,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0B0B10] border-t border-white/10 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0B0B10] border-t border-white/10 py-12 relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#FF3131]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C4B5FD]/5 rounded-full blur-3xl" />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="md:col-span-2">
@@ -72,7 +84,7 @@ export default function Footer() {
             © 2025 NUV. All Rights Reserved. | Websites that work as hard as you do.
           </p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

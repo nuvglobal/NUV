@@ -55,6 +55,7 @@ export default function Landing() {
       
       <HeroSection />
 
+      {/* Gradient Divider */}
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
 
       <motion.div
@@ -66,6 +67,7 @@ export default function Landing() {
         <WhyNuvSection />
       </motion.div>
 
+      {/* Gradient Divider */}
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#C4B5FD]/30 to-transparent" />
 
       <motion.div
@@ -77,6 +79,7 @@ export default function Landing() {
         <AboutSection />
       </motion.div>
 
+      {/* Gradient Divider */}
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
 
       <motion.div
@@ -88,6 +91,7 @@ export default function Landing() {
         <ServicesSection />
       </motion.div>
 
+      {/* Gradient Divider */}
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#C4B5FD]/30 to-transparent" />
 
       <motion.div
@@ -99,6 +103,7 @@ export default function Landing() {
         <CtaSection />
       </motion.div>
 
+      {/* Gradient Divider */}
       <div className="relative h-px bg-gradient-to-r from-transparent via-[#FF3131]/30 to-transparent" />
 
       <motion.div

@@ -83,30 +83,22 @@ export default function Landing() {
               </div>
 
               {/* Main Announcement */}
-              <div className="space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="flex justify-center"
-                >
-                  <div className="bg-[#D72638] h-4 w-80 rounded-full shadow-lg" />
-                </motion.div>
-
+              <div className="space-y-6">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="text-5xl md:text-6xl font-bold text-white leading-tight"
+                  transition={{ delay: 0.2 }}
+                  className="text-6xl md:text-7xl font-bold leading-tight text-center"
                 >
-                  NUV <span className="text-[#D72638] font-serif italic">IS LIVE</span>
+                  <span className="font-serif italic text-[#D72638]">NUV</span>{" "}
+                  <span className="text-white font-bold">IS LIVE</span>
                 </motion.h1>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="text-lg text-gray-300 max-w-sm mx-auto leading-relaxed"
+                  transition={{ delay: 0.3 }}
+                  className="text-lg text-gray-300 max-w-sm mx-auto leading-relaxed text-center"
                 >
                   Your digital transformation starts here. Websites that actually work.
                 </motion.p>

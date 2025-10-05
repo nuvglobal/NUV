@@ -10,7 +10,6 @@ export default function CtaSection() {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
-      // Faster scroll for instant responsiveness
       smoothScrollTo(offsetPosition, 400);
     }
   };
@@ -32,16 +31,16 @@ export default function CtaSection() {
           className="space-y-8"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-            Your website is your new{" "}
-            <span className="text-[#C4B5FD] font-serif italic">storefront</span>
+            Your website is your{" "}
+            <span className="text-[#C4B5FD] font-serif italic">storefront</span>.
             <br className="hidden md:block" />
             <span className="md:hidden"> </span>
-            Make it unforgettable.
+            Make it count.
           </h2>
           
           <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-            Join businesses who trust NUV to engineer{" "}
-            <span className="text-[#FF3131] font-semibold">growth</span>.
+            Ready to stop losing customers to slow, outdated websites? 
+            Let's build something that actually performs.
           </p>
 
           <motion.div

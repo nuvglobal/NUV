@@ -21,11 +21,6 @@ export default function AboutSection() {
               We're a lean team that delivers enterprise-level results without the overhead. 
               Every project gets our full attention and expertise.
             </p>
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-              <span className="text-[#FF3131] font-semibold">Proven track record</span>, 
-              <span className="text-[#C4B5FD] font-semibold"> fast execution</span>, 
-              <span className="text-white font-semibold"> measurable growth</span>.
-            </p>
           </div>
 
           {/* Story Layout: The Problem → The Solution */}
@@ -55,10 +50,10 @@ export default function AboutSection() {
                 <h3 className="text-xl md:text-2xl font-bold text-white">The Solution</h3>
               </div>
               <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-                NUV engineers <span className="text-[#D72638] font-semibold">digital weapons</span>—not just websites. 
-                We blend design, strategy, and technology to create experiences that command attention, 
-                convert visitors into customers, and scale with your ambition. 
-                Your website becomes your <span className="text-[#D4AF37] font-semibold">24/7 growth engine</span>.
+                NUV builds websites that actually perform. 
+                We focus on what matters: speed that keeps visitors engaged, 
+                design that converts browsers into buyers, and code that scales as you grow. 
+                No fluff. No templates. Just results that show up in your bottom line.
               </p>
             </div>
           </div>

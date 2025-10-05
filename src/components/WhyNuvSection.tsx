@@ -6,17 +6,17 @@ export default function WhyNuvSection() {
     {
       icon: Crown,
       title: "Authority",
-      description: "Websites that position you as the leader in your industry.",
+      description: "Your website should position you as the obvious choice in your market.",
     },
     {
       icon: TrendingUp,
       title: "Conversion",
-      description: "Designs that turn clicks into clients and visitors into customers.",
+      description: "Every element is designed to turn visitors into paying customers.",
     },
     {
       icon: Zap,
       title: "Speed",
-      description: "Fast, responsive, and future-proof builds that perform.",
+      description: "Lightning-fast load times that keep visitors engaged and Google happy.",
     },
   ];
 
@@ -35,8 +35,8 @@ export default function WhyNuvSection() {
             <span className="text-[#C4B5FD] font-serif italic">NUV</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We blend design, strategy, and tech to create websites that dominate attention. 
-            With NUV, you get a growth weapon.
+            We're a digital agency that builds websites with one goal: 
+            making your business more money. Simple as that.
           </p>
         </motion.div>
 

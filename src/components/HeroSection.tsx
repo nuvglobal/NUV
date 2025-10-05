@@ -44,10 +44,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
-              We craft digital identities engineered for{" "}
-              <span className="text-[#D72638] font-semibold">growth</span>,{" "}
-              <span className="text-[#D72638] font-semibold">authority</span>, and{" "}
-              <span className="text-[#D72638] font-semibold">trust</span>.
+              We build digital experiences that drive real business results—more leads, 
+              higher conversions, and a brand presence that stands out.
             </p>
           </div>
 

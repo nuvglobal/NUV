@@ -74,10 +74,10 @@ export default function ContactSection() {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             Let's Build Something{" "}
-            <span className="text-[#D72638] font-serif italic">Amazing</span>
+            <span className="text-[#D72638] font-serif italic">Great</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-            Ready to transform your digital presence? Let's discuss your project.
+            Tell us about your project. We'll get back to you within 24 hours.
           </p>
         </motion.div>
 
@@ -316,7 +316,7 @@ export default function ContactSection() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
-                Alternative Ways to Connect
+                Other Ways to Reach Us
               </h3>
               
               <div className="space-y-6">
@@ -326,7 +326,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">WhatsApp</h4>
-                    <p className="text-gray-400">Direct chat for quick questions</p>
+                    <p className="text-gray-400">Quick response for urgent queries</p>
                     <Button
                       variant="link"
                       className="text-[#D72638] p-0 h-auto hover:text-[#D72638]/80"
@@ -368,9 +368,9 @@ export default function ContactSection() {
 
             {/* Social Profiles */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Social Profiles</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Follow Us</h3>
               <p className="text-[#B3B3B3] text-sm mb-4">
-                Follow us for updates and case studies.
+                See our latest work and client success stories.
               </p>
               <div className="flex items-center gap-4">
                 <a href="#" aria-label="Instagram" className="group">

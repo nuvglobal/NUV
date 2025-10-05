@@ -5,8 +5,25 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="https://harmless-tapir-303.convex.cloud/api/storage/7a5b8a33-6c92-4db8-9129-a7a84ee424c0" />
   <link rel="apple-touch-icon" href="https://harmless-tapir-303.convex.cloud/api/storage/7a5b8a33-6c92-4db8-9129-a7a84ee424c0" />
+  <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#D72638" />
+  <meta name="description" content="Websites that work as hard as you do. We build digital experiences that drive real business results." />
   <title>NUV Growth</title>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered:', registration);
+          })
+          .catch((error) => {
+            console.log('SW registration failed:', error);
+          });
+      });
+    }
+  </script>
 </head>
 
 

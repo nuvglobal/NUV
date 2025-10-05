@@ -1,0 +1,24 @@
+{
+  "name": "NUV Growth - Digital Agency",
+  "short_name": "NUV",
+  "description": "Websites that work as hard as you do. We build digital experiences that drive real business results.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D72638",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://harmless-tapir-303.convex.cloud/api/storage/7a5b8a33-6c92-4db8-9129-a7a84ee424c0",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://harmless-tapir-303.convex.cloud/api/storage/7a5b8a33-6c92-4db8-9129-a7a84ee424c0",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

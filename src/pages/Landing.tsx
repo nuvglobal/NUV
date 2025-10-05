@@ -65,7 +65,7 @@ export default function Landing() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative bg-gradient-to-br from-[#0A0A0A] via-[#1E1E1E] to-[#0A0A0A] border-2 border-[#D72638] rounded-3xl p-16 shadow-2xl overflow-hidden min-h-[600px] flex items-center"
+            className="relative bg-gradient-to-br from-[#0A0A0A] via-[#1E1E1E] to-[#0A0A0A] border border-[#D72638] rounded-3xl p-16 shadow-2xl overflow-hidden min-h-[600px] flex items-center"
           >
             {/* Background glow effects */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#D72638]/30 rounded-full blur-3xl" />

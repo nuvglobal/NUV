@@ -45,7 +45,7 @@ export default function Header() {
             onClick={() => scrollToSection("hero")}
           >
             <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/fde5fd9c-bcbc-431d-86cf-6887522b39c4"
+              src="https://harmless-tapir-303.convex.cloud/api/storage/d1800825-3b7c-4e8d-b774-5d5ab6996776"
               alt="NUV logo"
               className="h-7 md:h-8 w-auto rounded-md"
             />

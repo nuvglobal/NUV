@@ -109,7 +109,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
               <CardHeader className="text-center">
                 <div className="flex justify-center">
                   <img
-                    src="https://harmless-tapir-303.convex.cloud/api/storage/fde5fd9c-bcbc-431d-86cf-6887522b39c4"
+                    src="https://harmless-tapir-303.convex.cloud/api/storage/d1800825-3b7c-4e8d-b774-5d5ab6996776"
                     alt="NUV logo"
                     width={64}
                     height={64}

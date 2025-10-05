@@ -90,7 +90,7 @@ export default function Landing() {
                   transition={{ delay: 0.2 }}
                   className="flex justify-center"
                 >
-                  <div className="bg-[#D72638] h-1 w-32 rounded-full" />
+                  <div className="bg-[#D72638] h-3 w-64 rounded-full shadow-lg" />
                 </motion.div>
 
                 <motion.h1
@@ -120,7 +120,7 @@ export default function Landing() {
                 className="pt-6 border-t border-white/10"
               >
                 <p className="text-[#D4AF37] font-semibold text-lg tracking-wide">
-                  nuvgrowth.com
+                  nuvglobal.netlify.app
                 </p>
               </motion.div>
             </div>

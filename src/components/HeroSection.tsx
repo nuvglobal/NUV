@@ -47,6 +47,15 @@ export default function HeroSection() {
               We build digital experiences that drive real business results—more leads, 
               higher conversions, and a brand presence that stands out.
             </p>
+
+            {/* Story Bridge */}
+            <div className="mt-8 pt-6 border-t border-white/10 max-w-2xl">
+              <p className="text-sm md:text-base text-[#B3B3B3] leading-relaxed">
+                Most businesses lose customers before they even click. Slow load times, confusing navigation, 
+                generic design—your website should be closing deals, not costing them. 
+                <span className="text-white font-medium"> We fix that.</span>
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-6">

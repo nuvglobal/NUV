@@ -44,7 +44,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
-              We build digital experiences that drive real business results, more leads, 
+              We build digital experiences that drive real business results—more leads, 
               higher conversions, and a brand presence that stands out.
             </p>
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
             <div className="mt-8 pt-6 border-t border-white/10 max-w-2xl">
               <p className="text-sm md:text-base text-[#B3B3B3] leading-relaxed">
                 Most businesses lose customers before they even click. Slow load times, confusing navigation, 
-                generic design.. your <span className="text-white font-medium uppercase">WEBSITE</span> should be closing deals, not costing them. 
+                generic design—your website should be closing deals, not costing them. 
                 <span className="text-white font-medium"> We fix that.</span>
               </p>
             </div>

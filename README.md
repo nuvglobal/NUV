@@ -29,6 +29,26 @@ The convex server has a separate set of environment variables that are accessibl
 
 Currently, these variables include auth-specific keys: JWKS, JWT_PRIVATE_KEY, and SITE_URL.
 
+## Deployment
+
+### Deploying to Netlify (Recommended)
+
+This project is optimized for Netlify deployment with full PWA support.
+
+#### Option 1: Deploy from GitHub (Easiest)
+
+1. **Push your code to GitHub**
+2. **Go to [Netlify](https://app.netlify.com/)**
+3. **Click "Add new site" → "Import an existing project"**
+4. **Connect your GitHub repository**
+5. **Netlify will auto-detect the settings:**
+   - Build command: `yarn build`
+   - Publish directory: `dist`
+6. **Click "Deploy site"**
+
+Your site will be live at `https://your-site-name.netlify.app`
+
+#### Option 2: Deploy from Laptop Terminal
 
 # Using Authentication (Important!)
 

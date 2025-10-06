@@ -11,23 +11,33 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/", // Root path for Render.com and Fleek.co
+  base: "/",
   define: {
     'import.meta.env.VITE_CONVEX_URL': JSON.stringify('https://lovely-dragon-907.convex.cloud'),
     'import.meta.env.VITE_VLY_APP_ID': JSON.stringify('fresh-comics-leave'),
     'import.meta.env.VITE_VLY_MONITORING_URL': JSON.stringify('https://runtime-monitoring.vly.ai/runtime-error'),
   },
   build: {
-    chunkSizeWarningLimit: 1000, // Increase chunk size warning limit to 1000 kB
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
-          // Split vendor chunks for better caching
           'react-vendor': ['react', 'react-dom', 'react-router'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'convex-vendor': ['convex/react', '@convex-dev/auth'],
         },
       },
     },
+    sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router', 'convex/react'],
   },
 });

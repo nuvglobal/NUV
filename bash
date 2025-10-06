@@ -1,1 +1,1 @@
-npm run build
+surge dist yourdomain.com

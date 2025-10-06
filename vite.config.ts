@@ -24,10 +24,18 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
+          'convex-vendor': ['convex/react', '@convex-dev/auth'],
         },
       },
     },
     sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router', 'convex/react'],

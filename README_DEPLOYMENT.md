@@ -9,7 +9,7 @@
 5. **Your site will be live at**: `https://nuv-growth.onrender.com`
 
 ### Manual Configuration (if needed):
-- Build Command: `npm install && npm run build`
+- Build Command: `yarn install && yarn build`
 - Publish Directory: `dist`
 - Environment Variables: Already hardcoded in `vite.config.ts`
 
@@ -24,7 +24,7 @@
 
 ### Manual Configuration (if needed):
 - Framework: Vite
-- Build Command: `npm install && npm run build`
+- Build Command: `yarn install && yarn build`
 - Publish Directory: `dist`
 - Node Version: 18
 
@@ -40,3 +40,5 @@
 ---
 
 ## Build Locally Before Deploying
+
+To test your build locally before deploying:

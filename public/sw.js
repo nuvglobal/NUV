@@ -1,8 +1,9 @@
 // Service Worker for PWA functionality
 const CACHE_NAME = 'nuv-cache-v1';
+const BASE_PATH = '/nuv';
 const urlsToCache = [
-  '/',
-  '/index.html',
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
 ];
 
 // Install event - cache essential files
@@ -10,6 +11,9 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
+      .catch((error) => {
+        console.error('Cache installation failed:', error);
+      })
   );
   self.skipWaiting();
 });
@@ -32,6 +36,11 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  // Only handle requests within our scope
+  if (!event.request.url.includes(BASE_PATH)) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {

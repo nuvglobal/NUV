@@ -1,1 +1,2 @@
-surge dist yourdomain.com
+cd dist
+surge

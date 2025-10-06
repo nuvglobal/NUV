@@ -1,6 +1,6 @@
 // Service Worker for PWA functionality
 const CACHE_NAME = 'nuv-cache-v1';
-const BASE_PATH = '/nuv';
+const BASE_PATH = '';
 const urlsToCache = [
   `${BASE_PATH}/`,
   `${BASE_PATH}/index.html`,
@@ -36,11 +36,6 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
-  // Only handle requests within our scope
-  if (!event.request.url.includes(BASE_PATH)) {
-    return;
-  }
-
   event.respondWith(
     caches.match(event.request)
       .then((response) => {

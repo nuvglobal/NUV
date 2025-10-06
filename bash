@@ -1,3 +1,1 @@
-git add .
-git commit -m "Add PWA functionality and Netlify optimization"
-git push
+VITE_CONVEX_URL=https://your-project.convex.cloud npm run build
